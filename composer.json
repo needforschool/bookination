@@ -1,0 +1,25 @@
+{
+    "name": "nfactoryschool/bookination",
+    "description": "Bookination est un projet dans le cadre d'une formation NFactory School qui consiste \u0000 d\u0000velopper une solution web qui permet aux patients de renseigner leur carnet de vaccinations.",
+    "authors": [
+        {
+            "name": "Antoine Kingue",
+            "email": "contact@antoinek.fr"
+        },
+        {
+            "name": "Aurore Fournier"
+        },
+        {
+            "name": "Demba Mbow"
+        },
+        {
+            "name": "Jules Giraud"
+        },
+        {
+            "name": "Sahel Julienne"
+        }
+    ],
+    "require": {
+        "symfony/dotenv": "^5.1"
+    }
+}
