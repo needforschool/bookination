@@ -91,6 +91,14 @@ a {
     cursor: pointer;
 }
 
+.btn.btn-login {
+    background-color: var(--pink);
+}
+
+.btn.btn-login:hover {
+    background-color: var(--dark-pink);
+}
+
 .btn.btn-instant-login {
     padding: 22px;
     border-radius: 50px;
@@ -170,14 +178,6 @@ a {
 #header .nav .profilebar {
     display: flex;
     align-items: center;
-}
-
-#header .nav .profilebar .btn.btn-login {
-    background-color: var(--pink);
-}
-
-#header .nav .profilebar .btn.btn-login:hover {
-    background-color: var(--dark-pink);
 }
 
 /* home */
