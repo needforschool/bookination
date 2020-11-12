@@ -115,6 +115,11 @@ a {
     background-color: var(--green) !important;
 }
 
+.btn.btn-success {
+    background-color: var(--green) !important;
+    cursor: not-allowed;
+}
+
 .btn.btn-instant-login {
     padding: 22px;
     border-radius: 50px;
