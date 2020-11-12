@@ -12,16 +12,16 @@ include('src/template/header.php');
                     <!-- mail -->
                     <input type="email" name="mail" placeholder="Votre email"></input>
                     <span class="error"></span>
-                    <!-- prénom -->
-                    <input type="text" name="firstname" placeholder="Votre prénom"></input>
+                    <!-- sujet -->
+                    <input type="text" name="sujbect" placeholder="Votre motif">
                     <span class="error"></span>
                 </div>
                 <div class="inputs-container">
                     <!-- nom -->
                     <input type="text" name="lastname" placeholder="Votre nom"></input>
                     <span class="error"></span>
-                    <!-- sujet -->
-                    <input type="text" name="sujbect" placeholder="Votre motif">
+                    <!-- prénom -->
+                    <input type="text" name="firstname" placeholder="Votre prénom"></input>
                     <span class="error"></span>
                 </div>
                 <!-- message -->

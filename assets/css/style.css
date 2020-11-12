@@ -97,6 +97,7 @@ a {
     font-weight: var(--bold);
     border-radius: 25px;
     cursor: pointer;
+    transition: all .2s;
 }
 
 .btn.btn-login {
