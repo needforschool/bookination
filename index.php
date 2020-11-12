@@ -1,5 +1,7 @@
 <?php
+require('src/inc/pdo.php');
 
+$title = 'Accueil - Bookination';
 include('src/template/header.php');
 ?>
 <section id="home">

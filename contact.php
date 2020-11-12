@@ -1,5 +1,6 @@
 <?php
 
+$title = 'Contact - Bookination';
 include('src/template/header.php');
 ?>
 <section id="contact">
