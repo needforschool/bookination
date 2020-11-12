@@ -265,14 +265,12 @@ a {
 
 #contact .wrap-fluid {
     display: flex;
-    flex: 1;
 }
 
 #contact .wrap-fluid .contact-form {
     flex: 1;
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 #contact .wrap-fluid .contact-form form {
@@ -322,6 +320,7 @@ a {
 
 #footer {
     height: 25px;
+    padding: 10px 0;
 }
 
 #footer ul {
@@ -366,6 +365,9 @@ a {
     }
     #contact .wrap-fluid {
         flex-direction: column-reverse;
+    }
+    #contact .wrap-fluid .contact-form {
+        justify-content: center;
     }
     #contact .wrap-fluid .contact-form form {
         margin: 20px 0;
