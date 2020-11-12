@@ -6,7 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Bookination</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -26,6 +27,7 @@
             </div>
         </div>
     </header>
+    <!--
     <section id="home">
         <div class="wrap-fluid">
             <div class="home-featured">
@@ -44,6 +46,42 @@
             </div>
         </div>
     </section>
+    -->
+
+    <section id="contact">
+        <div class="wrap-fluid">
+            <div class="contact-form">
+                <form action="" method="POST">
+
+                    <div class="inputs-container">
+                        <!-- mail -->
+                        <input type="email" name="mail" placeholder="Votre email"></input>
+                        <span class="error"></span>
+                        <!-- prénom -->
+                        <input type="text" name="firstname" placeholder="Votre prénom"></input>
+                        <span class="error"></span>
+                    </div>
+                    <div class="inputs-container">
+                        <!-- nom -->
+                        <input type="text" name="lastname" placeholder="Votre nom"></input>
+                        <span class="error"></span>
+                        <!-- sujet -->
+                        <input type="text" name="sujbect" placeholder="Votre motif">
+                        <span class="error"></span>
+                    </div>
+                    <!-- message -->
+                    <textarea name="message" placeholder="Votre message"></textarea>
+                    <span class="error"></span>
+                    <!-- submit -->
+                    <input type="submit" name="submit" class="btn btn-purple" value="Envoyer">
+                </form>
+            </div>
+            <div class="contact-image">
+                <img src="assets/img/contact_us.svg" alt="Image de contact">
+            </div>
+        </div>
+    </section>
+
     <footer id="footer">
         <div class="wrap-fluid">
             <ul>
@@ -55,4 +93,4 @@
     </footer>
 </body>
 
-</html>
+</html
