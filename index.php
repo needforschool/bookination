@@ -1,5 +1,7 @@
 <?php
+require('src/inc/pdo.php');
 
+$title = 'Accueil - Bookination';
 include('src/template/header.php');
 ?>
 <section id="home">
@@ -18,6 +20,7 @@ include('src/template/header.php');
         <div class="home-image">
             <img src="assets/img/doctors.svg" alt="Image de docteurs">
         </div>
+
     </div>
 </section>
 <?php include('src/template/footer.php') ?>

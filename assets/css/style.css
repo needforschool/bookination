@@ -97,6 +97,7 @@ a {
     font-weight: var(--bold);
     border-radius: 25px;
     cursor: pointer;
+    transition: all .2s;
 }
 
 .btn.btn-login {
@@ -269,14 +270,12 @@ a {
 
 #contact .wrap-fluid {
     display: flex;
-    flex: 1;
 }
 
 #contact .wrap-fluid .contact-form {
     flex: 1;
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 #contact .wrap-fluid .contact-form form {
@@ -322,10 +321,77 @@ a {
     height: auto;
 }
 
+/* register */
+
+#register {
+    display: flex;
+    flex: 1;
+}
+
+#register .wrap-fluid {
+    display: flex;
+}
+
+#register .wrap-fluid .register-form {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+#register .wrap-fluid .register-form form {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+#register .wrap-fluid .register-form form .inputs-container {
+    flex: 1;
+    display: flex;
+}
+
+#register .wrap-fluid .register-form form .inputs-container input:first-child, #register .wrap-fluid .register-form form .inputs-container select:first-child {
+    margin-right: 10px;
+}
+
+#register .wrap-fluid .register-form form input, #register .wrap-fluid .contact-form form textarea {
+    margin-top: 10px;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    background-color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 15px;
+    flex: 1;
+}
+
+#register .wrap-fluid .register-form .inputs-container select {
+    margin-top: 10px;
+    border: none;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--white);
+    border-radius: 12px;
+    padding: 10px 15px;
+    flex: 1;
+}
+
+#register .wrap-fluid .register-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#register .wrap-fluid .register-image img {
+    max-width: 80%;
+    height: auto;
+}
+
 /* footer */
 
 #footer {
     height: 25px;
+    padding: 10px 0;
 }
 
 #footer ul {
@@ -354,8 +420,8 @@ a {
     body {
         background-image: none;
     }
-    #home .wrap-fluid {
-        flex-direction: column;
+    #home .wrap-fluid, #contact .wrap-fluid, #register .wrap-fluid {
+        flex-direction: column-reverse;
     }
     #home .wrap-fluid .home-featured {
         text-align: center;
@@ -368,17 +434,17 @@ a {
     #home .wrap-fluid .home-image {
         margin-bottom: 50px;
     }
-    #contact .wrap-fluid {
-        flex-direction: column-reverse;
+    #contact .wrap-fluid .contact-form, #register .wrap-fluid .register-form {
+        justify-content: center;
     }
-    #contact .wrap-fluid .contact-form form {
+    #contact .wrap-fluid .contact-form form, #register .wrap-fluid .register-form form {
         margin: 20px 0;
         width: 90%;
     }
-    #contact .wrap-fluid .contact-form form .inputs-container {
+    #contact .wrap-fluid .contact-form form .inputs-container, #register .wrap-fluid .register-form form .inputs-container {
         flex-direction: column;
     }
-    #contact .wrap-fluid .contact-form form .inputs-container input:first-child {
+    #contact .wrap-fluid .contact-form form .inputs-container input:first-child, #register .wrap-fluid .register-form form .inputs-container input:first-child, #register .wrap-fluid .register-form form .inputs-container select:first-child {
         margin-right: 0;
     }
 }
