@@ -34,7 +34,7 @@ include('src/template/header.php');
                 <div class="inputs-container">
                     <input type="password" name="password" placeholder="Votre mot de passe"></input>
                     <span class="error"></span>
-                    <input type="password" name="password-confirm" placeholder="Confirmation de votre mot de passe"></input>
+                    <input type="password" name="password-confirm" placeholder="Confirmation du mot de passe"></input>
                     <span class="error"></span>
                 </div>
                 <input type="submit" name="submit" class="btn btn-purple" value="Envoyer">
