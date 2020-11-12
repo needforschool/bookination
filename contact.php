@@ -1,9 +1,8 @@
 <?php
-
 require('src/inc/pdo.php');
 require('src/inc/functions.php');
 
-$errors = array();
+$errors = [];
 $sent = false;
 
 if (!empty($_POST['submit'])) {

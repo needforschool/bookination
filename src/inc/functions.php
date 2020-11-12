@@ -45,6 +45,17 @@ function checkField($errors, $data, $key, $min, $max)
     return $errors;
 }
 
+function generateRandomString($length = 10)
+{
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $charactersLength = strlen($characters);
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[rand(0, $charactersLength - 1)];
+    }
+    return $randomString;
+}
+
 /**
  * Vérifie qu'une chaine de caractères est bien une adresse mail.
  * 
@@ -64,7 +75,7 @@ function checkEmail($errors, $data, $key)
  */
 
 /**
- * Vérifie qu'une chaine de caractères est bien une adresse mail.
+ * Insert des valeurs dans la table d'une base de donnée.
  * 
  * @param PDO $pdo
  * @param string $table
@@ -90,4 +101,24 @@ function insert($pdo, $table, $columns, $values)
         $query->bindValue(':value' . $i, $values[$i]);
     }
     $query->execute();
+}
+
+/**
+ * Séléctionne une valeur dans la table d'une base de donnée.
+ * 
+ * @param PDO $pdo
+ * @param string $table
+ * @param string $selectedColumn
+ * @param string $whereColumn
+ * @param string $whereValue
+ * @return array<mixed>
+ */
+function select($pdo, $table, $selectedColumn, $whereColumn, $whereValue)
+{
+    $sql = 'SELECT ' . $selectedColumn . ' FROM ' . $table . ' WHERE ' . $whereColumn . ' = :whereValue';
+    $query = $pdo->prepare($sql);
+    $query->bindValue(':whereValue', $whereValue);
+    $query->execute();
+    $result = $query->fetch();
+    return $result;
 }

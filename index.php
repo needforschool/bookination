@@ -1,5 +1,34 @@
 <?php
 require('src/inc/pdo.php');
+require('src/inc/functions.php');
+
+$errors = [];
+
+// TODO: rediriger vers la page dashboard si l'utilisateur est connecté
+if (!empty($_POST['mail'])) {
+    $mail = checkXss($_POST['mail']);
+
+    $errors = checkEmail($errors, $mail, 'mail');
+    $errors = checkField($errors, $mail, 'mail', 6, 160);
+
+    $checkUsedEmail = select($pdo, 'bn_users', 'mail', 'mail', $mail);
+
+    session_start();
+    $_SESSION['mail'] = $mail;
+$_SESSION['user'] = array(
+          'id'     => $user['id'],
+          'pseudo' => $user['pseudo'],
+          'role'   => $user['role'],
+          'ip'     => $_SERVER['REMOTE_ADDR'] // ::1
+        );
+
+    if (empty($checkUsedEmail)) {
+        header('Location: ./register.php');
+    } else {
+        header('Location: ./login.php');
+    }
+    die();
+}
 
 $title = 'Accueil - Bookination';
 include('src/template/header.php');
@@ -13,7 +42,7 @@ include('src/template/header.php');
                 il vous rappelle la date de vos prochains rendez-vous.
             </p>
             <form action="" method="post">
-                <input type="text" placeholder="Votre email">
+                <input type="email" name="mail" placeholder="Votre email">
                 <a class="btn btn-instant-login" onclick="this.closest('form').submit();return false;"></a>
             </form>
         </div>
