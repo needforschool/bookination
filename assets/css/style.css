@@ -72,8 +72,16 @@ a {
     transition: all .2s;
 }
 
+/* wraps */
+
 .wrap-fluid {
     max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.wrap-solid {
+    max-width: 380px;
     width: 100%;
     margin: 0 auto;
 }
@@ -97,6 +105,14 @@ a {
 
 .btn.btn-login:hover {
     background-color: var(--dark-pink);
+}
+
+.btn.btn-purple {
+    background-color: var(--dark-pink) !important;
+}
+
+.btn.btn-purple:hover {
+    background-color: var(--green) !important;
 }
 
 .btn.btn-instant-login {
@@ -239,6 +255,68 @@ a {
     height: auto;
 }
 
+/* contact */
+
+#contact {
+    display: flex;
+    flex: 1;
+}
+
+#contact .wrap-fluid {
+    display: flex;
+    flex: 1;
+}
+
+#contact .wrap-fluid .contact-form {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact .wrap-fluid .contact-form form {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+#contact .wrap-fluid .contact-form form .inputs-container {
+    flex: 1;
+    display: flex;
+}
+
+#contact .wrap-fluid .contact-form form .inputs-container input:first-child {
+    margin-right: 10px;
+}
+
+#contact .wrap-fluid .contact-form form input, #contact .wrap-fluid .contact-form form textarea {
+    margin-top: 10px;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    background-color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 15px;
+    flex: 1;
+}
+
+#contact .wrap-fluid .contact-form form textarea {
+    min-height: 100px;
+    resize: none;
+}
+
+#contact .wrap-fluid .contact-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact .wrap-fluid .contact-image img {
+    max-width: 80%;
+    height: auto;
+}
+
 /* footer */
 
 #footer {
@@ -283,7 +361,19 @@ a {
         width: 90%;
     }
     #home .wrap-fluid .home-image {
-
         margin-bottom: 50px;
+    }
+    #contact .wrap-fluid {
+        flex-direction: column-reverse;
+    }
+    #contact .wrap-fluid .contact-form form {
+        margin: 20px 0;
+        width: 90%;
+    }
+    #contact .wrap-fluid .contact-form form .inputs-container {
+        flex-direction: column;
+    }
+    #contact .wrap-fluid .contact-form form .inputs-container input:first-child {
+        margin-right: 0;
     }
 }
