@@ -17,10 +17,10 @@
                     <a href="./"><img src="assets/img/logo/logo-white-bg-none.png" alt="Logo Bookination"></a>
                 </div>
                 <ul class="navbar">
-                    <li><a href="contact.php">Contact</a></li>
+                    <li><a href="./contact.php">Contact</a></li>
                 </ul>
                 <div class="profilebar">
-                    <a href="" class="btn btn-login">Login</a>
+                    <a href="./login.php" class="btn btn-login">Se connecter</a>
                 </div>
             </div>
         </div>
