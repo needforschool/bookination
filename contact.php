@@ -8,10 +8,10 @@ $sent = false;
 if (!empty($_POST['submit'])) {
 
     $mail = checkXss($_POST['mail']);
-    $firstname = trim(strip_tags($_POST['firstname']));
-    $lastname = trim(strip_tags($_POST['lastname']));
-    $subject = trim(strip_tags($_POST['subject']));
-    $message = trim(strip_tags($_POST['message']));
+    $firstname = checkXss($_POST['firstname']);
+    $lastname = checkXss($_POST['lastname']);
+    $subject = checkXss($_POST['subject']);
+    $message = checkXss($_POST['message']);
 
     checkEmail($errors, $mail, 'mail');
     checkField($errors, $mail, 'mail', 6, 160);
