@@ -101,11 +101,11 @@ a {
 }
 
 .btn.btn-login {
-    background-color: var(--pink);
+    background-color: var(--dark-pink);
 }
 
 .btn.btn-login:hover {
-    background-color: var(--dark-pink);
+    background-color: var(--pink);
 }
 
 .btn.btn-purple {
@@ -114,6 +114,7 @@ a {
 
 .btn.btn-purple:hover {
     background-color: var(--green) !important;
+    color: var(--black);
 }
 
 .btn.btn-success {
@@ -302,6 +303,7 @@ a {
     font-family: 'Montserrat', sans-serif;
     padding: 10px 15px;
     flex: 1;
+    font-size: 15px;
 }
 
 #contact .wrap-fluid .contact-form form textarea {
@@ -353,7 +355,7 @@ a {
     margin-right: 10px;
 }
 
-#register .wrap-fluid .register-form form input, #register .wrap-fluid .contact-form form textarea {
+#register .wrap-fluid .register-form form input, #register .wrap-fluid .register-form form .btn {
     margin-top: 10px;
     border: none;
     outline: none;
@@ -362,6 +364,8 @@ a {
     font-family: 'Montserrat', sans-serif;
     padding: 10px 15px;
     flex: 1;
+    font-size: 15px;
+    line-height: normal;
 }
 
 #register .wrap-fluid .register-form .inputs-container select {
@@ -383,6 +387,83 @@ a {
 }
 
 #register .wrap-fluid .register-image img {
+    max-width: 80%;
+    height: auto;
+}
+
+#register .wrap-fluid .register-form form p {
+    color: #ffffff;
+    font-style: italic;
+    margin: 10px auto 5px;
+    font-size: 12px;
+}
+
+/* login */
+
+#login {
+    display: flex;
+    flex: 1;
+}
+
+#login .wrap-fluid {
+    display: flex;
+}
+
+#login .wrap-fluid .login-form {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+#login .wrap-fluid .login-form form {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+#login .wrap-fluid .login-form form .inputs-container {
+    flex: 1;
+    display: flex;
+}
+
+#login .wrap-fluid .login-form form .inputs-container input:first-child {
+    margin-right: 10px;
+}
+
+#login .wrap-fluid .login-form form input, #login .wrap-fluid .login-form form .btn {
+    margin-top: 10px;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    background-color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 15px;
+    flex: 1;
+    font-size: 15px;
+}
+
+#login-form .wrap-fluid .login-form form .inputs-container {
+    display: flex;
+    margin-bottom: 60px;
+    align-items: center;
+}
+
+#login .wrap-fluid .login-form form .forgot-password {
+    color: #ffffff;
+    text-decoration: underline;
+    font-style: italic;
+    margin: 10px auto 5px;
+    font-size: 12px;
+}
+
+#login .wrap-fluid .login-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#login .wrap-fluid .login-image img {
     max-width: 80%;
     height: auto;
 }
@@ -420,7 +501,7 @@ a {
     body {
         background-image: none;
     }
-    #home .wrap-fluid, #contact .wrap-fluid, #register .wrap-fluid {
+    #home .wrap-fluid, #contact .wrap-fluid, #register .wrap-fluid, #login .wrap-fluid {
         flex-direction: column-reverse;
     }
     #home .wrap-fluid .home-featured {
@@ -434,14 +515,14 @@ a {
     #home .wrap-fluid .home-image {
         margin-bottom: 50px;
     }
-    #contact .wrap-fluid .contact-form, #register .wrap-fluid .register-form {
+    #contact .wrap-fluid .contact-form, #register .wrap-fluid .register-form, #login .wrap-fluid .login-form {
         justify-content: center;
     }
-    #contact .wrap-fluid .contact-form form, #register .wrap-fluid .register-form form {
+    #contact .wrap-fluid .contact-form form, #register .wrap-fluid .register-form form, #login .wrap-fluid .login-form form {
         margin: 20px 0;
         width: 90%;
     }
-    #contact .wrap-fluid .contact-form form .inputs-container, #register .wrap-fluid .register-form form .inputs-container {
+    #contact .wrap-fluid .contact-form form .inputs-container, #register .wrap-fluid .register-form form .inputs-container, #login .wrap-fluid .login-form form {
         flex-direction: column;
     }
     #contact .wrap-fluid .contact-form form .inputs-container input:first-child, #register .wrap-fluid .register-form form .inputs-container input:first-child, #register .wrap-fluid .register-form form .inputs-container select:first-child {
