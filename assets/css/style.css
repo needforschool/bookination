@@ -397,6 +397,84 @@ a {
     height: auto;
 }
 
+#register .wrap-fluid .register-form form p {
+    color: #ffffff;
+    font-style: italic;
+    margin: 10px auto 5px;
+    font-size: 12px;
+}
+
+/* login */
+
+#login {
+    display: flex;
+    flex: 1;
+}
+
+#login .wrap-fluid {
+    display: flex;
+}
+
+#login .wrap-fluid .login-form {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+#login .wrap-fluid .login-form form {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+#login .wrap-fluid .login-form form .inputs-container {
+    flex: 1;
+    display: flex;
+}
+
+#login .wrap-fluid .login-form form .inputs-container input:first-child {
+    margin-right: 10px;
+}
+
+#login .wrap-fluid .login-form form input, #login .wrap-fluid .login-form form .btn {
+    margin-top: 10px;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    background-color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 15px;
+    flex: 1;
+    font-size: 15px;
+    line-height: normal;
+}
+
+#login-form .wrap-fluid .login-form form .inputs-container {
+    display: flex;
+    margin-bottom: 60px;
+    align-items: center;
+}
+
+#login .wrap-fluid .login-form form .forgot-password {
+    color: #ffffff;
+    text-decoration: underline;
+    font-style: italic;
+    margin: 10px auto 5px;
+    font-size: 12px;
+}
+
+#login .wrap-fluid .login-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#login .wrap-fluid .login-image img {
+    max-width: 80%;
+    height: auto;
+}
+
 /* legal */
 
 #legal {
@@ -508,8 +586,9 @@ a {
         margin-right: 0;
     }
     #legal .wrap-solid .legal-content {
-        background-color: none;
+        background-color: transparent;
+        box-shadow: none;
         color: var(--white);
-        
+        text-align: initial;
     }
 }
