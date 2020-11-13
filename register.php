@@ -118,12 +118,7 @@ include('src/template/header.php');
                     <span class="error"><?= (!empty($errors['birthdate'])) ? $errors['birthdate'] : '' ?></span>
                 </div>
                 <input type="email" name="mail" placeholder="Votre email" value="<?php
-                                                                                    if (!empty($_POST['mail'])) {
-                                                                                        echo $_POST['mail'];
-                                                                                    } elseif (!empty($_SESSION['mail'])) {
-                                                                                        echo $_SESSION['mail'];
-                                                                                    }
-                                                                                    ?>">
+                                                          ?>">
                 <span class="error"><?= (!empty($errors['mail'])) ? $errors['mail'] : '' ?></span>
                 <div class="inputs-container">
                     <input type="password" name="password" placeholder="Votre mot de passe" value="<?= (!empty($_POST['password'])) ? $_POST['password'] : '' ?>">
@@ -132,6 +127,9 @@ include('src/template/header.php');
                     <span class="error"><?= (!empty($errors['password-confirm'])) ? $errors['password-confirm'] : '' ?></span>
                 </div>
                 <input type="submit" name="submit" class="btn btn-purple" value="S'inscrire">
+                <p>Vous possédez déjà un compte ?</p>
+                <a href="./login.php" class="btn btn-purple">Se connecter</a>
+
             </form>
         </div>
         <div class="register-image">
