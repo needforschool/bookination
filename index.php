@@ -14,7 +14,9 @@ if (!empty($_POST['mail'])) {
     $checkUsedEmail = select($pdo, 'bn_users', 'mail', 'mail', $mail);
 
     session_start();
-    $_SESSION['mail'] = $mail;
+    $_SESSION['visitor'] = [
+        'mail' => $mail
+    ];
 
     if (empty($checkUsedEmail)) {
         header('Location: ./register.php');
