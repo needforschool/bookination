@@ -80,8 +80,14 @@ a {
     margin: 0 auto;
 }
 
+.wrap {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
 .wrap-solid {
-    max-width: 380px;
+    max-width: 800px;
     width: 100%;
     margin: 0 auto;
 }
@@ -391,81 +397,49 @@ a {
     height: auto;
 }
 
-#register .wrap-fluid .register-form form p {
-    color: #ffffff;
-    font-style: italic;
-    margin: 10px auto 5px;
-    font-size: 12px;
-}
+/* legal */
 
-/* login */
-
-#login {
-    display: flex;
+#legal {
     flex: 1;
 }
 
-#login .wrap-fluid {
-    display: flex;
-}
+#legal .wrap-solid {}
 
-#login .wrap-fluid .login-form {
-    flex: 1;
-    display: flex;
-    align-items: center;
-}
-
-#login .wrap-fluid .login-form form {
-    display: flex;
-    flex-direction: column;
-    width: 500px;
-}
-
-#login .wrap-fluid .login-form form .inputs-container {
-    flex: 1;
-    display: flex;
-}
-
-#login .wrap-fluid .login-form form .inputs-container input:first-child {
-    margin-right: 10px;
-}
-
-#login .wrap-fluid .login-form form input, #login .wrap-fluid .login-form form .btn {
-    margin-top: 10px;
-    border: none;
-    outline: none;
-    border-radius: 12px;
+#legal .wrap-solid .legal-content {
+    margin-top: 30px;
+    padding: 50px 30px;
     background-color: var(--white);
-    font-family: 'Montserrat', sans-serif;
-    padding: 10px 15px;
-    flex: 1;
-    font-size: 15px;
+    color: var(--black);
+    border-radius: 50px;
+    line-height: 1.2;
+    text-align: justify;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
 }
 
-#login-form .wrap-fluid .login-form form .inputs-container {
-    display: flex;
-    margin-bottom: 60px;
-    align-items: center;
+#legal .wrap-solid .legal-content h1 {
+    font-weight: var(--bold);
+    font-size: 38px;
+    text-align: center;
 }
 
-#login .wrap-fluid .login-form form .forgot-password {
-    color: #ffffff;
-    text-decoration: underline;
+#legal .wrap-solid .legal-content h3 {
+    font-weight: var(--bold);
+    margin-top: 30px;
+}
+
+#legal .wrap-solid .legal-content strong{
+    font-weight: var(--bold);
+    
+}
+
+#legal .wrap-solid .legal-content p {
+    margin-top: 10px;
+}
+
+
+#legal .wrap-solid .legal-content a {
+    color: var(--black);
     font-style: italic;
-    margin: 10px auto 5px;
-    font-size: 12px;
-}
-
-#login .wrap-fluid .login-image {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#login .wrap-fluid .login-image img {
-    max-width: 80%;
-    height: auto;
 }
 
 /* footer */
@@ -493,6 +467,11 @@ a {
 
 @media only screen and (max-width: 1470px) {
     .wrap-fluid {
+        width: 95%;
+    }
+}
+@media only screen and (max-width: 840px) {
+    .wrap {
         width: 95%;
     }
 }
@@ -527,5 +506,10 @@ a {
     }
     #contact .wrap-fluid .contact-form form .inputs-container input:first-child, #register .wrap-fluid .register-form form .inputs-container input:first-child, #register .wrap-fluid .register-form form .inputs-container select:first-child {
         margin-right: 0;
+    }
+    #legal .wrap-solid .legal-content {
+        background-color: none;
+        color: var(--white);
+        
     }
 }
