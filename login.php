@@ -16,27 +16,30 @@ if (!empty($_POST['submit'])) {
     $errors = checkField($errors, $password, 'password', 6, 200);
 
     $user = select($pdo, 'bn_users', '*', 'mail', $mail);
-    if (!empty($user)) {
-        if (password_verify($password, $user['password'])) {
-            $_SESSION['user'] = [
-                'id'     => $user['id'],
-                'mail' => $user['mail'],
-                'firstname' => $user['firstname'],
-                'lastname' => $user['lastname'],
-                'role'   => $user['role'],
-                'ip'     => $_SERVER['REMOTE_ADDR']
-            ];
-            header('Location: ./dashboard.php');
-            die();
+
+    if (count($errors) == 0) {
+        if (!empty($user)) {
+            if (password_verify($password, $user['password'])) {
+                $_SESSION['user'] = [
+                    'id'     => $user['id'],
+                    'mail' => $user['mail'],
+                    'firstname' => $user['firstname'],
+                    'lastname' => $user['lastname'],
+                    'role'   => $user['role'],
+                    'ip'     => $_SERVER['REMOTE_ADDR']
+                ];
+                header('Location: ./dashboard.php');
+                die();
+            } else {
+                $errors['password'] = 'Mot de passe incorrect';
+            }
         } else {
-            $errors['password'] = 'Mot de passe incorrect';
+            $_SESSION['visitor'] = [
+                'mail' => $mail
+            ];
+            header('Location: ./register.php');
+            die();
         }
-    } else {
-        $_SESSION['visitor'] = [
-            'mail' => $mail
-        ];
-        header('Location: ./register.php');
-        die();
     }
 }
 
@@ -48,7 +51,8 @@ include('src/template/header.php'); ?>
     <div class="wrap-fluid">
         <div class="login-form" id="login-form">
             <form action="" method="POST">
-                <input type="email" name="mail" placeholder="Votre email" value="<?php if (!empty($_POST['mail'])) echo $_POST['mail']; elseif (!empty($_SESSION['visitor']['mail'])) echo $_SESSION['visitor']['mail']; ?>">
+                <input type="email" name="mail" placeholder="Votre email" value="<?php if (!empty($_POST['mail'])) echo $_POST['mail'];
+                                                                                    elseif (!empty($_SESSION['visitor']['mail'])) echo $_SESSION['visitor']['mail']; ?>">
                 <span class="error"><?= (!empty($errors['mail'])) ? $errors['mail'] : '' ?></span>
                 <input type="password" name="password" placeholder="Votre mot de passe" value="<?= (!empty($_POST['password'])) ? $_POST['password'] : '' ?>">
                 <span class="error"><?= (!empty($errors['password'])) ? $errors['password'] : '' ?></span>
