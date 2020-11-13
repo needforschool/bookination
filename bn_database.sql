@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.5
+-- version 5.0.3
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:8889
--- Generation Time: Nov 12, 2020 at 11:19 AM
--- Server version: 5.7.30
--- PHP Version: 7.4.9
+-- Hôte : 127.0.0.1
+-- Généré le : ven. 13 nov. 2020 à 01:43
+-- Version du serveur :  10.4.14-MariaDB
+-- Version de PHP : 7.4.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -17,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `bookination`
+-- Base de données : `bookination`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `bn_contact`
+-- Structure de la table `bn_contact`
 --
 
 CREATE TABLE `bn_contact` (
@@ -39,7 +40,7 @@ CREATE TABLE `bn_contact` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `bn_reminders`
+-- Structure de la table `bn_reminders`
 --
 
 CREATE TABLE `bn_reminders` (
@@ -55,16 +56,16 @@ CREATE TABLE `bn_reminders` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `bn_users`
+-- Structure de la table `bn_users`
 --
 
 CREATE TABLE `bn_users` (
   `id` int(11) NOT NULL,
-  `mail` int(160) NOT NULL,
-  `password` int(250) NOT NULL,
-  `token` int(255) NOT NULL,
-  `firstname` int(100) NOT NULL,
-  `lastname` int(100) NOT NULL,
+  `mail` varchar(160) NOT NULL,
+  `password` varchar(250) NOT NULL,
+  `token` varchar(255) NOT NULL,
+  `firstname` varchar(100) NOT NULL,
+  `lastname` varchar(100) NOT NULL,
   `birthdate` date NOT NULL,
   `gender` varchar(20) NOT NULL,
   `created_at` datetime NOT NULL,
@@ -75,7 +76,7 @@ CREATE TABLE `bn_users` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `bn_vaccines`
+-- Structure de la table `bn_vaccines`
 --
 
 CREATE TABLE `bn_vaccines` (
@@ -88,17 +89,17 @@ CREATE TABLE `bn_vaccines` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Indexes for dumped tables
+-- Index pour les tables déchargées
 --
 
 --
--- Indexes for table `bn_contact`
+-- Index pour la table `bn_contact`
 --
 ALTER TABLE `bn_contact`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `bn_reminders`
+-- Index pour la table `bn_reminders`
 --
 ALTER TABLE `bn_reminders`
   ADD PRIMARY KEY (`id`),
@@ -106,55 +107,56 @@ ALTER TABLE `bn_reminders`
   ADD KEY `reminder_vaccines_id` (`vaccine_id`);
 
 --
--- Indexes for table `bn_users`
+-- Index pour la table `bn_users`
 --
 ALTER TABLE `bn_users`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `bn_vaccines`
+-- Index pour la table `bn_vaccines`
 --
 ALTER TABLE `bn_vaccines`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT pour les tables déchargées
 --
 
 --
--- AUTO_INCREMENT for table `bn_contact`
+-- AUTO_INCREMENT pour la table `bn_contact`
 --
 ALTER TABLE `bn_contact`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `bn_reminders`
+-- AUTO_INCREMENT pour la table `bn_reminders`
 --
 ALTER TABLE `bn_reminders`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `bn_users`
+-- AUTO_INCREMENT pour la table `bn_users`
 --
 ALTER TABLE `bn_users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `bn_vaccines`
+-- AUTO_INCREMENT pour la table `bn_vaccines`
 --
 ALTER TABLE `bn_vaccines`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- Constraints for dumped tables
+-- Contraintes pour les tables déchargées
 --
 
 --
--- Constraints for table `bn_reminders`
+-- Contraintes pour la table `bn_reminders`
 --
 ALTER TABLE `bn_reminders`
   ADD CONSTRAINT `reminder_user_id` FOREIGN KEY (`user_id`) REFERENCES `bn_users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `reminder_vaccines_id` FOREIGN KEY (`vaccine_id`) REFERENCES `bn_vaccines` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
