@@ -36,6 +36,7 @@ if (!empty($_POST['submit'])) {
         if ($token == $checkUsedToken) {
             while ($token == $checkUsedToken) {
                 $token = generateRandomString(200);
+                $checkUsedToken = select($pdo, 'bn_users', 'token', 'token', $token);
             }
         }
 

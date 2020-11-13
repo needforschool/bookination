@@ -15,12 +15,6 @@ if (!empty($_POST['mail'])) {
 
     session_start();
     $_SESSION['mail'] = $mail;
-$_SESSION['user'] = array(
-          'id'     => $user['id'],
-          'pseudo' => $user['pseudo'],
-          'role'   => $user['role'],
-          'ip'     => $_SERVER['REMOTE_ADDR'] // ::1
-        );
 
     if (empty($checkUsedEmail)) {
         header('Location: ./register.php');
