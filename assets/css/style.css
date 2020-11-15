@@ -590,6 +590,7 @@ img {
     }
     #header .nav .navlogo {
         margin-right: 0;
+        width: 50px;
     }
     #header .nav .navlogo img.navlogo-normal {
         display: none;
