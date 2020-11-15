@@ -70,6 +70,20 @@ function generateRandomString($length = 10)
     return $randomString;
 }
 
+function isLogged()
+{
+    if (!empty($_SESSION['user'])) return true;
+    return false;
+}
+
+function logout()
+{
+    session_start();
+    $_SESSION['user'] = [];
+    header('Location: ./');
+}
+
+
 /**
  * SQL
  */

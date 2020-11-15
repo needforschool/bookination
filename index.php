@@ -2,6 +2,8 @@
 require('src/inc/pdo.php');
 require('src/inc/functions.php');
 
+session_start();
+
 $errors = [];
 
 // TODO: rediriger vers la page dashboard si l'utilisateur est connecté
@@ -13,7 +15,6 @@ if (!empty($_POST['mail'])) {
 
     $checkUsedEmail = select($pdo, 'bn_users', 'mail', 'mail', $mail);
 
-    session_start();
     $_SESSION['visitor'] = [
         'mail' => $mail
     ];
@@ -38,7 +39,9 @@ include('src/template/header.php');
                 il vous rappelle la date de vos prochains rendez-vous.
             </p>
             <form action="" method="post">
-                <input type="email" name="mail" placeholder="Votre email">
+                <input type="email" name="mail" placeholder="Votre email" value="<?php if (!empty($_POST['mail'])) $_POST['mail'];
+                                                                                    elseif (!empty($_SESSION['user']['mail'])) echo $_SESSION['user']['mail'];
+                                                                                    elseif (!empty($_SESSION['visitor']['mail'])) echo $_SESSION['visitor']['mail']; ?>">
                 <a class="btn btn-instant-login" onclick="this.closest('form').submit();return false;"></a>
             </form>
         </div>

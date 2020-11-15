@@ -2,9 +2,14 @@
 require('src/inc/pdo.php');
 require('src/inc/functions.php');
 
-$errors = [];
-
 session_start();
+
+if (isLogged()) {
+    header('Location: ./dashboard.php');
+    die();
+}
+
+$errors = [];
 
 if (!empty($_POST['submit'])) {
     if (empty($_POST['gender'])) $_POST['gender'] = 'non-specifie';
@@ -117,7 +122,8 @@ include('src/template/header.php');
                     <input type="date" name="birthdate" value="<?= (!empty($_POST['birthdate'])) ? $_POST['birthdate'] : '' ?>">
                     <span class="error"><?= (!empty($errors['birthdate'])) ? $errors['birthdate'] : '' ?></span>
                 </div>
-                <input type="email" name="mail" placeholder="Votre email" value="<?php if (!empty($_POST['mail'])) echo $_POST['mail']; elseif (!empty($_SESSION['visitor']['mail'])) echo $_SESSION['visitor']['mail']; ?>">
+                <input type="email" name="mail" placeholder="Votre email" value="<?php if (!empty($_POST['mail'])) echo $_POST['mail'];
+                                                                                    elseif (!empty($_SESSION['visitor']['mail'])) echo $_SESSION['visitor']['mail']; ?>">
                 <span class="error"><?= (!empty($errors['mail'])) ? $errors['mail'] : '' ?></span>
                 <div class="inputs-container">
                     <input type="password" name="password" placeholder="Votre mot de passe" value="<?= (!empty($_POST['password'])) ? $_POST['password'] : '' ?>">

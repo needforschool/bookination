@@ -4,6 +4,11 @@ require('src/inc/functions.php');
 
 session_start();
 
+if (isLogged()) {
+    header('Location: ./dashboard.php');
+    die();
+}
+
 $errors = [];
 
 if (!empty($_POST['submit'])) {

@@ -20,7 +20,7 @@
                     <li><a href="./contact.php">Contact</a></li>
                 </ul>
                 <div class="profilebar">
-                    <a href="./login.php" class="btn btn-login">Se connecter</a>
+                    <a href="<?= (isLogged()) ? './dashboard.php' : './login.php' ?>" class="btn btn-login"><?= (isLogged()) ? 'Tableau de bord' : 'Se connecter' ?></a>
                 </div>
             </div>
         </div>
