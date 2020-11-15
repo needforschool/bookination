@@ -177,6 +177,14 @@ img {
     width: 180px;
 }
 
+#header .nav .navlogo img.navlogo-normal {
+    display: initial;
+}
+
+#header .nav .navlogo img.navlogo-small {
+    display: none;
+}
+
 #header .nav .navbar {
     display: flex;
     flex: 1;
@@ -574,8 +582,20 @@ img {
     body {
         background-image: none;
     }
+    .btn {
+        padding: 7px 20px;
+    }
     #home .wrap-fluid, #contact .wrap-fluid, #register .wrap-fluid, #login .wrap-fluid {
         flex-direction: column-reverse;
+    }
+    #header .nav .navlogo {
+        margin-right: 0;
+    }
+    #header .nav .navlogo img.navlogo-normal {
+        display: none;
+    }
+    #header .nav .navlogo img.navlogo-small {
+        display: initial;
     }
     #home .wrap-fluid .home-featured {
         text-align: center;

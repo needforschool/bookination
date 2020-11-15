@@ -15,7 +15,10 @@
         <div class="wrap-fluid">
             <div class="nav">
                 <div class="navlogo">
-                    <a href="./"><img src="assets/img/logo/logo-white-bg-none.png" alt="Logo Bookination"></a>
+                    <a href="./">
+                        <img src="assets/img/logo/logo-white-bg-none.png" alt="Logo Bookination" class="navlogo-normal">
+                        <img src="assets/img/logo/logo-square-bg-none.png" alt="Logo Bookination" class="navlogo-small">
+                    </a>
                 </div>
                 <ul class="navbar">
                     <li><a href="./contact.php">Contact</a></li>
