@@ -82,6 +82,8 @@ if (!empty($_POST['submit'])) {
                     'mail' => $user['mail'],
                     'firstname' => $user['firstname'],
                     'lastname' => $user['lastname'],
+                    'birthdate' => $user['birthdate'],
+                    'gender' => $user['gender'],
                     'role'   => $user['role'],
                     'ip'     => $_SERVER['REMOTE_ADDR']
                 ];

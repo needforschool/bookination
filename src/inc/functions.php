@@ -70,6 +70,14 @@ function generateRandomString($length = 10)
     return $randomString;
 }
 
+function calculateAge($birthDate)
+{
+    $date = new DateTime($birthDate);
+    $now = new DateTime();
+    $interval = $now->diff($date);
+    return $interval->y;
+}
+
 function isLogged()
 {
     if (!empty($_SESSION['user'])) return true;
@@ -82,7 +90,6 @@ function logout()
     $_SESSION['user'] = [];
     header('Location: ./');
 }
-
 
 /**
  * SQL
@@ -135,4 +142,15 @@ function select($pdo, $table, $selectedColumn, $whereColumn, $whereValue)
     $query->execute();
     $result = $query->fetch();
     return $result;
+}
+
+function update($pdo, $table, $values, $whereColumn, $whereValue)
+{
+    if (!is_array($values)) return;
+
+    $strValues = implode(', ', $values);
+    $sql = 'UPDATE ' . $table . ' SET ' . $strValues . ' WHERE ' . $whereColumn . ' = :whereValue';
+    $query = $pdo->prepare($sql);
+    $query->bindValue(':whereValue', $whereValue);
+    $query->execute();
 }
