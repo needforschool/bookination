@@ -747,6 +747,144 @@ img {
     filter: invert(1);
 }
 
+/* forgot_password */
+
+#forgot_password {
+    display: flex;
+    flex: 1;
+}
+
+#forgot_password .wrap-fluid {
+    display: flex;
+}
+
+#forgot_password .wrap-fluid .forgot-form {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+#forgot_password .wrap-fluid .forgot-form form {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+#forgot_password .wrap-fluid .forgot-form form .inputs-container {
+    flex: 1;
+    display: flex;
+}
+
+#forgot_password .wrap-fluid .forgot-form form .inputs-container input:first-child {
+    margin-right: 10px;
+}
+
+#forgot_password .wrap-fluid .forgot-form form input, #forgot_password .wrap-fluid .login-form form .btn {
+    margin-top: 10px;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    background-color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 15px;
+    flex: 1;
+    font-size: 15px;
+    line-height: normal;
+}
+
+#forgot-form .wrap-fluid .forgot-form form .inputs-container {
+    display: flex;
+    margin-bottom: 60px;
+    align-items: center;
+}
+
+#forgot_password .wrap-fluid .forgot-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#forgot_password .wrap-fluid .forgot-image img {
+    max-width: 80%;
+    height: auto;
+    animation-name: zoomInDown;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+/* recovery_forgot_password */
+
+#recovery_password {
+    display: flex;
+    flex: 1;
+}
+
+#recovery_password .wrap-fluid {
+    display: flex;
+}
+
+#recovery_password .wrap-fluid .recovery-form {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+#recovery_password .wrap-fluid .recovery-form form {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+#recovery_password .wrap-fluid .recovery-form form .inputs-container {
+    flex: 1;
+    display: flex;
+}
+
+#recovery_password .wrap-fluid .recovery-form form .inputs-container input:first-child {
+    margin-right: 10px;
+}
+
+#recovery_password .wrap-fluid .recovery-form form input, #recovery_password .wrap-fluid .recovery-form form .btn {
+    margin-top: 10px;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    background-color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 15px;
+    flex: 1;
+    font-size: 15px;
+    line-height: normal;
+}
+
+#recovery-form .wrap-fluid .recovery-form form .inputs-container {
+    display: flex;
+    margin-bottom: 60px;
+    align-items: center;
+}
+
+#recovery_password .wrap-fluid .recovery-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#recovery_password .wrap-fluid .recovery-image img {
+    max-width: 80%;
+    height: auto;
+    animation-name: zoomInDown;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+/* #recovery_password .wrap-fluid .recovery-form form {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+} */
+
 /* footer */
 
 #footer {
@@ -789,7 +927,7 @@ img {
     .btn {
         padding: 7px 20px;
     }
-    #home .wrap-fluid, #contact .wrap-fluid, #register .wrap-fluid, #login .wrap-fluid {
+    #home .wrap-fluid, #contact .wrap-fluid, #register .wrap-fluid, #login .wrap-fluid, #forgot_password .wrap-fluid, #recovery_password .wrap-fluid {
         flex-direction: column-reverse;
     }
     #header .nav .navlogo {
@@ -813,17 +951,17 @@ img {
     #home .wrap-fluid .home-image {
         margin-bottom: 50px;
     }
-    #contact .wrap-fluid .contact-form, #register .wrap-fluid .register-form, #login .wrap-fluid .login-form {
+    #contact .wrap-fluid .contact-form, #register .wrap-fluid .register-form, #login .wrap-fluid .login-form, #forgot_password .wrap-fluid .forgot-form, #recovery_password .wrap-fluid .recovery-form {
         justify-content: center;
     }
-    #contact .wrap-fluid .contact-form form, #register .wrap-fluid .register-form form, #login .wrap-fluid .login-form form {
+    #contact .wrap-fluid .contact-form form, #register .wrap-fluid .register-form form, #login .wrap-fluid .login-form form, #forgot_password .wrap-fluid .forgot-form form, #recovery_password .wrap-fluid .recovery-form form {
         margin: 20px 0;
         width: 90%;
     }
-    #contact .wrap-fluid .contact-form form .inputs-container, #register .wrap-fluid .register-form form .inputs-container, #login .wrap-fluid .login-form form {
+    #contact .wrap-fluid .contact-form form .inputs-container, #register .wrap-fluid .register-form form .inputs-container, #login .wrap-fluid .login-form form, #forgot_password .wrap-fluid .forgot-form form .inputs-container, #recovery_password .wrap-fluid .recovery-form form .inputs-container {
         flex-direction: column;
     }
-    #contact .wrap-fluid .contact-form form .inputs-container input:first-child, #register .wrap-fluid .register-form form .inputs-container input:first-child, #register .wrap-fluid .register-form form .inputs-container select:first-child {
+    #contact .wrap-fluid .contact-form form .inputs-container input:first-child, #register .wrap-fluid .register-form form .inputs-container input:first-child, #register .wrap-fluid .register-form form .inputs-container select:first-child, #forgot_password .wrap-fluid .forgot-form form .inputs-container select:first-child, #recovery_password .wrap-fluid .recovery-form form .inputs-container select:first-child {
         margin-right: 0;
     }
     #legal .wrap-solid .legal-content {
