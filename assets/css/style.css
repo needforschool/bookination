@@ -576,7 +576,7 @@ img {
     font-family: 'Montserrat', sans-serif;
 }
 
-#dashboard .wrap-fluid .container .profile-card input[type="email"], #dashboard .wrap-fluid .container .profile-card input[type="text"], #dashboard .wrap-fluid .container .profile-card input[type="date"] {
+#dashboard .wrap-fluid .container .profile-card input[type="email"], #dashboard .wrap-fluid .container .profile-card input[type="text"], #dashboard .wrap-fluid .container .profile-card input[type="date"], #dashboard .wrap-fluid .container .profile-card input[type="password"] {
     padding: 0;
 }
 
@@ -598,10 +598,7 @@ img {
     display: flex;
     flex: 1;
     align-items: center;
-}
-
-#dashboard .wrap-fluid .container .profile-card .profile-container .profile-item {
-    margin-right: 15px;
+    justify-content: space-between;
 }
 
 #dashboard .wrap-fluid .container .profile-card .profile .profile-container .profile-avatar {
@@ -673,6 +670,7 @@ img {
     border-radius: 30px;
     padding: 25px;
     color: var(--black);
+    flex-direction: column;
 }
 
 #dashboard .wrap-fluid .container .reminders-card table {
@@ -690,6 +688,14 @@ img {
     font-size: 12px;
     padding: 15px 0;
     border-bottom: solid 1px rgba(0, 0, 0, .05);
+}
+
+#dashboard .wrap-fluid .container .reminders-card input {
+    border: none;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    align-self: flex-end;
+    margin-top: auto;
 }
 
 #dashboard .wrap-fluid .sidebar {
