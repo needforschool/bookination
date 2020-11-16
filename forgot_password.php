@@ -11,7 +11,7 @@ include('src/template/header.php');
                 <input type="email" name="mail" placeholder="Votre email" value="<?php if (!empty($_POST['mail'])) echo $_POST['mail'];
                                                                                     ?>">
                 <span class="error"><?= (!empty($errors['mail'])) ? $errors['mail'] : '' ?></span>
-                <input type="submit" name="submit" class="btn btn-purple" value="Se connecter">
+                <input type="submit" name="submit" class="btn btn-purple" value="Envoyer">
             </form>
         </div>
         <div class="forgot-image">
