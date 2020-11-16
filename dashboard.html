@@ -11,10 +11,92 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-
-
 <body>
+    <header id="header">
+        <div class="wrap-fluid">
+            <div class="nav">
+                <div class="navlogo">
+                    <a href="./"><img src="assets/img/logo/logo-white-bg-none.png" alt="Logo Bookination"></a>
+                </div>
+                <ul class="navbar">
+                    <li><a href="contact.php">Contact</a></li>
+                </ul>
+                <div class="profilebar">
+                    <a href="" class="btn btn-login">Login</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section id="dashboard">
+        <div class="wrap-fluid">
+            <div class="container">
+                <form action="" class="profile-card" method="POST">
+                    <div class="profile">
+                        <div class="profile-container">
+                            <div class="profile-avatar">
+                                <img src="assets/img/user-avatar.jpg" alt="Photo ID">
+                            </div>
+                            <div class="profile-details">
+                                <input type="text" value="Alice">
+                                <input type="text" value="Fournier">
+                                <p>22 ans</p>
+                            </div>
+                        </div>
+                        <div class="profile-container">
+                            <div class="profile-item">
+                                <h3>Rappels</h3>
+                                <p>8</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-tags">
+                        <div class="profile-container">
+                            <div class="profile-item">
+                                <h3>Email</h3>
+                                <input type="email" value="hello@wor.ld">
+                            </div>
+                            <div class="profile-item">
+                                <h3>Date de naissance</h3>
+                                <input type="date" value="1998-11-11">
+                            </div>
+                        </div>
+                        <div class="profile-container">
+                            <input type="submit" name="save" class="btn btn-purple" value="Sauvegarder">
+                        </div>
+                    </div>
+                </form>
+                <div class="reminders-card">
 
+                    <table>
+                        <tr>
+                            <th>Vaccin</th>
+                            <th>Description</th>
+                            <th>Dernière injection</th>
+                            <th>Prochaine injection</th>
+                        </tr>
+                        <tr>
+                            <td>Lorem</td>
+                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, excepturi!</td>
+                            <td>10/10/2010</td>
+                            <td>10/10/2010</td>
+                        </tr>
+                        <tr>
+                            <td>Lorem</td>
+                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, excepturi!</td>
+                            <td>10/10/2010</td>
+                            <td>10/10/2010</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="sidebar">
+                <div class="prescription">
+                    <h3>Ajouter une injection</h3>
+                    <a class="btn btn-purple" href="#"></a>
+                </div>
+            </div>
+        </div>
+    </section>
     <footer id="footer">
         <div class="wrap-fluid">
             <ul>
