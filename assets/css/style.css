@@ -506,8 +506,6 @@ img {
     flex: 1;
 }
 
-#legal .wrap-solid {}
-
 #legal .wrap-solid .legal-content {
     margin-top: 30px;
     padding: 50px 30px;
@@ -879,11 +877,50 @@ img {
     animation-fill-mode: both;
 }
 
-/* #recovery_password .wrap-fluid .recovery-form form {
+/* errors */
+
+#error {
     display: flex;
+    flex: 1;
+}
+
+#error .wrap-fluid {
+    display: flex;
+}
+
+#error .wrap-fluid .error-text {
+    display: flex;
+    flex: 1;
     flex-direction: column;
-    width: 500px;
-} */
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+#error .wrap-fluid .error-text h1 {
+    font-size: 50px;
+    font-weight: var(--bold);
+}
+
+#error .wrap-fluid .error-text p {
+    margin-top: 25px;
+    line-height: 2;
+}
+
+#error .wrap-fluid .error-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#error .wrap-fluid .error-image img {
+    max-width: 80%;
+    height: auto;
+    animation-name: zoomInDown;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
 
 /* footer */
 
@@ -927,7 +964,7 @@ img {
     .btn {
         padding: 7px 20px;
     }
-    #home .wrap-fluid, #contact .wrap-fluid, #register .wrap-fluid, #login .wrap-fluid, #forgot_password .wrap-fluid, #recovery_password .wrap-fluid {
+    #home .wrap-fluid, #contact .wrap-fluid, #register .wrap-fluid, #login .wrap-fluid, #forgot_password .wrap-fluid, #recovery_password .wrap-fluid, #error .wrap-fluid {
         flex-direction: column-reverse;
     }
     #header .nav .navlogo {
@@ -969,6 +1006,17 @@ img {
         box-shadow: none;
         color: var(--white);
         text-align: initial;
+    }
+    #errors .wrap-fluid {
+        text-align: center;
+        align-items: center;
+        margin-bottom: 50px;
+        margin: 0 auto;
+    }
+    #errors .wrap-fluid p {
+        font-size: 30px;
+        text-align: center;
+        margin: 0 auto;
     }
 }
 
