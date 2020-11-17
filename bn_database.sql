@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : ven. 13 nov. 2020 à 01:43
+-- Généré le : mar. 17 nov. 2020 à 11:04
 -- Version du serveur :  10.4.14-MariaDB
 -- Version de PHP : 7.4.11
 
@@ -89,6 +89,22 @@ CREATE TABLE `bn_vaccines` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
+-- Déchargement des données de la table `bn_vaccines`
+--
+
+INSERT INTO `bn_vaccines` (`id`, `name`, `mandatory`, `frequency`, `created_at`, `updated_at`) VALUES
+(1, 'Le Tétanos', 1, 'Obligatoire dès la naissance. Les rappels de l\\\'adulte sont recommandés à âges fixes (25, 45, 65 ans…)', '2020-11-17 10:01:21', '2020-11-17 10:27:56'),
+(2, 'Le Zona', 1, 'Recommandée chez les personnes âgées de 65 à 74 ans inclus', '2018-11-17 10:30:40', '2020-11-17 10:30:40'),
+(3, 'La Grippe', 0, 'Recommandée chaque année pour les personnes à risques y compris les enfants à partir de 6 mois, les femmes enceintes et les personnes âgées de 65 ans et plus', '2018-11-17 10:30:40', '2020-11-17 10:30:40'),
+(4, 'Le Choléra', 0, 'Le personnel humanitaire peut être exposé dans les zones sinistrées et les camps de réfugiés. Notamment en Afrique, Moyen-Orient , Amérique Centrale et en Asie\r\n', '2018-11-17 10:01:21', '2020-11-17 10:44:56'),
+(5, 'La Fièvre jaune', 0, 'En France, la vaccination contre la fièvre jaune est obligatoire chez les enfants de plus de 12 mois et les adultes voyageant ou résidant en Guyane', '2018-11-17 10:44:56', '2020-11-17 10:44:56'),
+(6, 'La Rage ', 0, 'La vaccination de pré-exposition doit être proposée aux sujets ayant un risque élevé de contamination par le virus de la rage', '2018-11-17 10:01:21', '2020-11-17 10:48:36'),
+(7, 'La Rougeole', 1, 'Recommandée à l\\\'âge de 12 mois avec une 2e dose entre 16 et 18 mois', '2018-11-17 10:01:21', '2020-11-17 10:48:36'),
+(8, 'La Poliomyélite', 1, 'La vaccination contre la poliomyélite s’adresse à tous, enfants et adultes tout au long de la vie. Elle permet d’éviter la maladie et ses complications', '2018-11-17 10:01:21', '2020-11-17 10:58:32'),
+(9, 'Le Papillomavirus Humains ', 0, 'Recommandée chez les jeunes filles de 11 à 14 ans avec un rattrapage jusqu\\\'à 19 inclus', '2018-11-17 10:01:21', '2020-11-17 10:52:49'),
+(10, 'La Coqueluche ', 1, 'Recommandée à l\\\'âge de 2 mois ainsi qu\\\'à l\\\'entourage du nourrisson si leur dernier rappel de la coqueluche date de plus de 10 ans', '2020-11-17 10:56:30', '2020-11-17 10:56:30');
+
+--
 -- Index pour les tables déchargées
 --
 
@@ -144,7 +160,7 @@ ALTER TABLE `bn_users`
 -- AUTO_INCREMENT pour la table `bn_vaccines`
 --
 ALTER TABLE `bn_vaccines`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- Contraintes pour les tables déchargées
