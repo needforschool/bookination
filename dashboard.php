@@ -69,7 +69,11 @@ include('src/template/header.php');
                 <div class="profile">
                     <div class="profile-container">
                         <div class="profile-avatar">
-                            <img src="assets/img/user-avatar.jpg" alt="Photo ID">
+                            <?php if ($user['gender'] == 'homme') : ?>
+                                <img src="assets/img/man.png" alt="Photo ID">
+                            <?php else : ?>
+                                <img src="assets/img/woman.png" alt="Photo ID">
+                            <?php endif; ?>
                         </div>
                         <div class="profile-details">
                             <input type="text" name="firstname" value="<?= $user['firstname'] ?>">
