@@ -608,6 +608,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: var(--pink);
 }
 
 #dashboard .wrap-fluid .container .profile-card .profile .profile-container .profile-avatar img {
