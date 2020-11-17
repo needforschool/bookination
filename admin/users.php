@@ -17,58 +17,595 @@ include('src/template/header.php'); ?>
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
     </div>
-    <!-- /.content-header -->
+    
+     <!-- Main content -->
+     <section class="content">
 
-    <!-- Main content -->
-    <div class="content">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="card">
-                        <div class="card-header border-0">
-                            <div class="d-flex justify-content-between">
-                                <h3 class="card-title">Visite du site</h3>
-                                <a href="javascript:void(0);"></a>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <div class="d-flex">
-                                <p class="d-flex flex-column">
-                                    <span class="text-bold text-lg">820</span>
-                                    <span>Utilisateurs </span>
-                                </p>
-                                <p class="ml-auto d-flex flex-column text-right">
-                                    <span class="text-success">
-                                        <i class="fas fa-arrow-up"></i> 12.5%
-                                    </span>
-                                    <span class="text-muted">Depuis la semaine dernière</span>
-                                </p>
-                            </div>
-                            <!-- /.d-flex -->
+<!-- Default box -->
+<div class="card">
+  <div class="card-header">
+    <h3 class="card-title">Liste complete</h3>
 
-                            <div class="position-relative mb-4">
-                                <canvas id="visitors-chart" height="200"></canvas>
-                            </div>
-
-                            <div class="d-flex flex-row justify-content-end">
-                                <span class="mr-2">
-                                    <i class="fas fa-square text-primary"></i> Cette semaine
-                                </span>
-
-                                <span>
-                                    <i class="fas fa-square text-gray"></i> Semaine dernière
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /.card -->
-                </div>
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container-fluid -->
+    <div class="card-tools">
+      <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+        <i class="fas fa-minus"></i></button>
+      <button type="button" class="btn btn-tool" data-card-widget="remove" data-toggle="tooltip" title="Remove">
+        <i class="fas fa-times"></i></button>
     </div>
-    <!-- /.content -->
+  </div>
+  <div class="card-body p-0">
+    <table class="table table-striped projects">
+        <thead>
+            <tr>
+                <th style="width: 2%">
+                    #
+                </th>
+                <th style="width: 8.8%">
+                    e-mail
+                </th>
+                <th style="width: 8.8%">
+                    Mot de passe
+                </th>
+                <th style="width: 8.8%">
+                    Token
+                </th>
+                <th style="width: 8.8%">
+                    Firstname
+                </th>
+                <th style="width: 8.8%">
+                    Lastname
+                </th>
+                <th style="width: 8.8%">
+                     Date de naissance
+                </th>
+                <th style="width: 8.8%">
+                    Genre
+                </th>
+                <th style="width: 8.8%">
+                    Date de création
+                </th>
+                <th style="width: 8,8%">
+                    Date de misa à jour
+                </th>
+                <th style="width: 8%" class="text-center">
+                    Rôle
+                </th>
+                <th style="width: 10%">
+
+                </th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    1
+                </td>
+                <td>
+                    sahel.ethnyca@live.fr
+                </td>
+                <td>
+                    ***********
+                </td>
+                <td>
+                    dsdsdsdsdqazbvwdfh
+                </td>
+                <td>
+                    <a>
+                        Sahel
+                    </a>
+                </td>
+                <td>
+                    <a>
+                        Julienne
+                    </a>
+                </td>
+                <td>
+                    14/ 31 /2010
+                </td>
+                <td>
+                    Mascululin
+                </td>
+                
+                <td>
+                    14/ 31 /2010
+                </td>
+                <td>
+                    14/ 31 /2018
+                </td>
+                <td class="project-state">
+                    <span class="badge badge-success">Administrateur</span>
+                </td>
+                <td class="project-actions text-right">
+                    <a class="btn btn-info btn-sm" href="#">
+                        <i class="fas fa-pencil-alt">
+                        </i>
+                        Editer
+                    </a>
+                    <a class="btn btn-danger btn-sm" href="#">
+                        <i class="fas fa-trash">
+                        </i>
+                        Supprimer
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    1
+                </td>
+                <td>
+                    sahel.ethnyca@live.fr
+                </td>
+                <td>
+                    ***********
+                </td>
+                <td>
+                    dsdsdsdsdqazbvwdfh
+                </td>
+                <td>
+                    <a>
+                        Sahel
+                    </a>
+                </td>
+                <td>
+                    <a>
+                        Julienne
+                    </a>
+                </td>
+                <td>
+                    14/ 31 /2010
+                </td>
+                <td>
+                    Mascululin
+                </td>
+                
+                <td>
+                    14/ 31 /2010
+                </td>
+                <td>
+                    14/ 31 /2018
+                </td>
+                <td class="project-state">
+                    <span class="badge badge-success">Administrateur</span>
+                </td>
+                <td class="project-actions text-right">
+                    <a class="btn btn-info btn-sm" href="#">
+                        <i class="fas fa-pencil-alt">
+                        </i>
+                        Editer
+                    </a>
+                    <a class="btn btn-danger btn-sm" href="#">
+                        <i class="fas fa-trash">
+                        </i>
+                        Supprimer
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    1
+                </td>
+                <td>
+                    sahel.ethnyca@live.fr
+                </td>
+                <td>
+                    ***********
+                </td>
+                <td>
+                    dsdsdsdsdqazbvwdfh
+                </td>
+                <td>
+                    <a>
+                        Sahel
+                    </a>
+                </td>
+                <td>
+                    <a>
+                        Julienne
+                    </a>
+                </td>
+                <td>
+                    14/ 31 /2010
+                </td>
+                <td>
+                    Mascululin
+                </td>
+                
+                <td>
+                    14/ 31 /2010
+                </td>
+                <td>
+                    14/ 31 /2018
+                </td>
+                <td class="project-state">
+                    <span class="badge badge-success">Administrateur</span>
+                </td>
+                <td class="project-actions text-right">
+                    <a class="btn btn-info btn-sm" href="#">
+                        <i class="fas fa-pencil-alt">
+                        </i>
+                        Editer
+                    </a>
+                    <a class="btn btn-danger btn-sm" href="#">
+                        <i class="fas fa-trash">
+                        </i>
+                        Supprimer
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    1
+                </td>
+                <td>
+                    sahel.ethnyca@live.fr
+                </td>
+                <td>
+                    ***********
+                </td>
+                <td>
+                    dsdsdsdsdqazbvwdfh
+                </td>
+                <td>
+                    <a>
+                        Sahel
+                    </a>
+                </td>
+                <td>
+                    <a>
+                        Julienne
+                    </a>
+                </td>
+                <td>
+                    14/ 31 /2010
+                </td>
+                <td>
+                    Mascululin
+                </td>
+                
+                <td>
+                    14/ 31 /2010
+                </td>
+                <td>
+                    14/ 31 /2018
+                </td>
+                <td class="project-state">
+                    <span class="badge badge-success">Administrateur</span>
+                </td>
+                <td class="project-actions text-right">
+                    <a class="btn btn-info btn-sm" href="#">
+                        <i class="fas fa-pencil-alt">
+                        </i>
+                        Editer
+                    </a>
+                    <a class="btn btn-danger btn-sm" href="#">
+                        <i class="fas fa-trash">
+                        </i>
+                        Supprimer
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    1
+                </td>
+                <td>
+                    sahel.ethnyca@live.fr
+                </td>
+                <td>
+                    ***********
+                </td>
+                <td>
+                    dsdsdsdsdqazbvwdfh
+                </td>
+                <td>
+                    <a>
+                        Sahel
+                    </a>
+                </td>
+                <td>
+                    <a>
+                        Julienne
+                    </a>
+                </td>
+                <td>
+                    14/ 31 /2010
+                </td>
+                <td>
+                    Mascululin
+                </td>
+                
+                <td>
+                    14/ 31 /2010
+                </td>
+                <td>
+                    14/ 31 /2018
+                </td>
+                <td class="project-state">
+                    <span class="badge badge-success">Administrateur</span>
+                </td>
+                <td class="project-actions text-right">
+                    <a class="btn btn-info btn-sm" href="#">
+                        <i class="fas fa-pencil-alt">
+                        </i>
+                        Editer
+                    </a>
+                    <a class="btn btn-danger btn-sm" href="#">
+                        <i class="fas fa-trash">
+                        </i>
+                        Supprimer
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    1
+                </td>
+                <td>
+                    sahel.ethnyca@live.fr
+                </td>
+                <td>
+                    ***********
+                </td>
+                <td>
+                    dsdsdsdsdqazbvwdfh
+                </td>
+                <td>
+                    <a>
+                        Sahel
+                    </a>
+                </td>
+                <td>
+                    <a>
+                        Julienne
+                    </a>
+                </td>
+                <td>
+                    14/ 31 /2010
+                </td>
+                <td>
+                    Mascululin
+                </td>
+                
+                <td>
+                    14/ 31 /2010
+                </td>
+                <td>
+                    14/ 31 /2018
+                </td>
+                <td class="project-state">
+                    <span class="badge badge-success">Administrateur</span>
+                </td>
+                <td class="project-actions text-right">
+                    <a class="btn btn-info btn-sm" href="#">
+                        <i class="fas fa-pencil-alt">
+                        </i>
+                        Editer
+                    </a>
+                    <a class="btn btn-danger btn-sm" href="#">
+                        <i class="fas fa-trash">
+                        </i>
+                        Supprimer
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    1
+                </td>
+                <td>
+                    sahel.ethnyca@live.fr
+                </td>
+                <td>
+                    ***********
+                </td>
+                <td>
+                    dsdsdsdsdqazbvwdfh
+                </td>
+                <td>
+                    <a>
+                        Sahel
+                    </a>
+                </td>
+                <td>
+                    <a>
+                        Julienne
+                    </a>
+                </td>
+                <td>
+                    14/ 31 /2010
+                </td>
+                <td>
+                    Mascululin
+                </td>
+                
+                <td>
+                    14/ 31 /2010
+                </td>
+                <td>
+                    14/ 31 /2018
+                </td>
+                <td class="project-state">
+                    <span class="badge badge-success">Administrateur</span>
+                </td>
+                <td class="project-actions text-right">
+                    <a class="btn btn-info btn-sm" href="#">
+                        <i class="fas fa-pencil-alt">
+                        </i>
+                        Editer
+                    </a>
+                    <a class="btn btn-danger btn-sm" href="#">
+                        <i class="fas fa-trash">
+                        </i>
+                        Supprimer
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    1
+                </td>
+                <td>
+                    sahel.ethnyca@live.fr
+                </td>
+                <td>
+                    ***********
+                </td>
+                <td>
+                    dsdsdsdsdqazbvwdfh
+                </td>
+                <td>
+                    <a>
+                        Sahel
+                    </a>
+                </td>
+                <td>
+                    <a>
+                        Julienne
+                    </a>
+                </td>
+                <td>
+                    14/ 31 /2010
+                </td>
+                <td>
+                    Mascululin
+                </td>
+                
+                <td>
+                    14/ 31 /2010
+                </td>
+                <td>
+                    14/ 31 /2018
+                </td>
+                <td class="project-state">
+                    <span class="badge badge-success">Administrateur</span>
+                </td>
+                <td class="project-actions text-right">
+                    <a class="btn btn-info btn-sm" href="#">
+                        <i class="fas fa-pencil-alt">
+                        </i>
+                        Editer
+                    </a>
+                    <a class="btn btn-danger btn-sm" href="#">
+                        <i class="fas fa-trash">
+                        </i>
+                        Supprimer
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    1
+                </td>
+                <td>
+                    sahel.ethnyca@live.fr
+                </td>
+                <td>
+                    ***********
+                </td>
+                <td>
+                    dsdsdsdsdqazbvwdfh
+                </td>
+                <td>
+                    <a>
+                        Sahel
+                    </a>
+                </td>
+                <td>
+                    <a>
+                        Julienne
+                    </a>
+                </td>
+                <td>
+                    14/ 31 /2010
+                </td>
+                <td>
+                    Mascululin
+                </td>
+                
+                <td>
+                    14/ 31 /2010
+                </td>
+                <td>
+                    14/ 31 /2018
+                </td>
+                <td class="project-state">
+                    <span class="badge badge-success">Administrateur</span>
+                </td>
+                <td class="project-actions text-right">
+                    <a class="btn btn-info btn-sm" href="#">
+                        <i class="fas fa-pencil-alt">
+                        </i>
+                        Editer
+                    </a>
+                    <a class="btn btn-danger btn-sm" href="#">
+                        <i class="fas fa-trash">
+                        </i>
+                        Supprimer
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    1
+                </td>
+                <td>
+                    sahel.ethnyca@live.fr
+                </td>
+                <td>
+                    ***********
+                </td>
+                <td>
+                    dsdsdsdsdqazbvwdfh
+                </td>
+                <td>
+                    <a>
+                        Sahel
+                    </a>
+                </td>
+                <td>
+                    <a>
+                        Julienne
+                    </a>
+                </td>
+                <td>
+                    14/ 31 /2010
+                </td>
+                <td>
+                    Mascululin
+                </td>
+                
+                <td>
+                    14/ 31 /2010
+                </td>
+                <td>
+                    14/ 31 /2018
+                </td>
+                <td class="project-state">
+                    <span class="badge badge-success">Administrateur</span>
+                </td>
+                <td class="project-actions text-right">
+                    <a class="btn btn-info btn-sm" href="#">
+                        <i class="fas fa-pencil-alt">
+                        </i>
+                        Editer
+                    </a>
+                    <a class="btn btn-danger btn-sm" href="#">
+                        <i class="fas fa-trash">
+                        </i>
+                        Supprimer
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+  </div>
+  <!-- /.card-body -->
+</div>
+<!-- /.card -->
+
+</section>
+<!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
 
