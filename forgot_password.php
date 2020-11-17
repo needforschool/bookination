@@ -18,5 +18,3 @@ include('src/template/header.php');
             <img src="assets\img\undraw_forgot_password_gi2d.svg" alt="Image forgot">
         </div>
 </section>
-
-
