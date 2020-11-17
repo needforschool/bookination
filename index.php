@@ -51,4 +51,4 @@ include('src/template/header.php');
 
     </div>
 </section>
-<?php include('src/template/footer.php') ?>
+<?php include('src/template/footer.php');

@@ -628,7 +628,7 @@ img {
     font-size: 18px;
 }
 
-#dashboard .wrap-fluid .container .profile-card .profile .profile-container .profile-details p {
+#dashboard .wrap-fluid .container .profile-card .profile .profile-container .profile-details p, #dashboard .wrap-fluid .container .profile-card .profile .profile-container a {
     margin-top: 5px;
     font-size: 15px;
 }
@@ -640,14 +640,33 @@ img {
     color: var(--white);
 }
 
+#dashboard .wrap-fluid .container .profile-card .profile-tags .profile-container select {
+    border: none;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--white-secondary);
+    border-radius: 12px;
+}
+
+#dashboard .wrap-fluid .container .profile-card .profile-container .profile-item {
+    display: flex;
+    flex-direction: column;
+}
+
 #dashboard .wrap-fluid .container .profile-card .profile-container .profile-item h3 {
     font-size: 15px;
 }
 
-#dashboard .wrap-fluid .container .profile-card .profile-container .profile-item p, #dashboard .wrap-fluid .container .profile-card .profile-container .profile-item input {
+#dashboard .wrap-fluid .container .profile-card .profile-container .profile-item p, #dashboard .wrap-fluid .container .profile-card .profile-container .profile-item input, #dashboard .wrap-fluid .container .profile-card .profile-container .profile-item a, #dashboard .wrap-fluid .container .profile-card .profile-container .profile-item select {
     margin-top: 5px;
     font-weight: var(--bold);
     font-size: 14px;
+    display: inline-block;
+}
+
+#dashboard .wrap-fluid .container .profile-card .profile-container .profile-item a {
+    color: var(--black);
+    text-align: center;
 }
 
 #dashboard .wrap-fluid .container .profile-card .profile-tags {
@@ -692,8 +711,6 @@ img {
     border: none;
     outline: none;
     font-family: 'Montserrat', sans-serif;
-    align-self: flex-end;
-    margin-top: auto;
 }
 
 #dashboard .wrap-fluid .sidebar {
