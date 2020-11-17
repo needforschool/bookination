@@ -1,13 +1,14 @@
 <?php
 require('src/inc/pdo.php');
 require('src/inc/functions.php');
+
 $title = 'Récupération de mot de passe- Bookination';
 include('src/template/header.php');
 ?>
 <section id="forgot_password">
     <div class="wrap-fluid">
         <div class="forgot-form" id="forgot-form">
-            <form action="forgot_password_recovery.php" method="POST">
+            <form action="" method="POST">
                 <input type="email" name="mail" placeholder="Votre email" value="<?php if (!empty($_POST['mail'])) echo $_POST['mail'];
                                                                                     ?>">
                 <span class="error"><?= (!empty($errors['mail'])) ? $errors['mail'] : '' ?></span>
