@@ -65,7 +65,7 @@ to get the desired effect
                     <div class="info">
                         <a href="#" class="d-block">Alexander Pierce</a>
 
-                        <a href=# class="profile-edite"><i class="far fa-edit"></i></a>
+                        <a href="../dashboard.php" class="profile-edite"><i class="far fa-edit"></i></a>
                     </div>
                 </div>
 

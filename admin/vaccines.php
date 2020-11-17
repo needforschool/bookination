@@ -19,34 +19,440 @@ include('src/template/header.php'); ?>
     </div>
     <!-- /.content-header -->
 
+<!-- Main content -->
+<section class="content">
 
-    <!-- Main content -->
-    <div class="content">
-        <form action="" method="POST">
+<!-- Default box -->
+<div class="card">
+  <div class="card-header">
+    <h3 class="card-title">Liste complete</h3>
 
-            <input type="text" name="name" placeholder="Nom du vaccin" value="<?php if (!empty($_POST['name'])) echo $_POST['name'];?>">
-            <span class="error"><?= (!empty($errors['name'])) ? $errors['name'] : '' ?></span> 
-
-            <select name="mandat" value="<?php if (!empty($_POST['mandatory'])) echo $_POST['mandatory'];?>">
-                <option value="">-- choisir le type de vaccin --</option>
-                <option value="vert">Obligatoire</option>
-                <option value="jaune">Non-obligatoire</option>
-            </select>
-            <span class="error"><?= (!empty($errors['mandatory'])) ? $errors['mandatory'] : '' ?></span>
-  
-            <input type="text" name="frequency" placeholder="Fréquence de vaccination" value="<?php if (!empty($_POST['frequency'])) echo $_POST['frequency'];?>">
-            <span class="error"><?= (!empty($errors['frequency'])) ? $errors['frequency'] : '' ?></span>
-    
-        </form>
-        <!-- /.content -->
+    <div class="card-tools">
+      <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+        <i class="fas fa-minus"></i></button>
+      <button type="button" class="btn btn-tool" data-card-widget="remove" data-toggle="tooltip" title="Remove">
+        <i class="fas fa-times"></i></button>
     </div>
-    <!-- /.content-wrapper -->
+  </div>
+  <div class="card-body p-0">
+    <table class="table table-striped projects">
+        <thead>
+            <tr>
+                <th style="width: 2%">
+                    #
+                </th>
+                <th style="width: 10%">
+                    nom du vaccin
+                </th>
+                <th style="width: 10%">
+                    type
+                </th>
+                <th style="width: 40%">
+                    Fréquence
+                </th>
+                <th style="width: 10%">
+                    Date de création
+                </th>
+                <th style="width: 10%">
+                    Date de mise à jour
+                </th>
+                <th style="width: 18%">
+                    
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    1
+                </td>
+                <td>
+                    <a>
+                        Vaccin contre la grippe
+                    </a>
+                </td>
+                <td>
+                    Obligatoire
+                </td>
+                <td>
+                    Tout les 3 jours.
+                </td>
+                <td>
+                     10/03/2020
+                </td>
+                <td>
+                   17/09/2020
+                </td>
+                <td class="project-actions text-right">
+                    <a class="btn btn-info btn-sm" href="#">
+                        <i class="fas fa-pencil-alt">
+                        </i>
+                        Editer
+                    </a>
+                    <a class="btn btn-danger btn-sm" href="#">
+                        <i class="fas fa-trash">
+                        </i>
+                        Supprimer
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    1
+                </td>
+                <td>
+                    <a>
+                        Vaccin contre la grippe
+                    </a>
+                </td>
+                <td>
+                    Obligatoire
+                </td>
+                <td>
+                    Tout les 3 jours.
+                </td>
+                <td>
+                     10/03/2020
+                </td>
+                <td>
+                   17/09/2020
+                </td>
+                <td class="project-actions text-right">
+                    <a class="btn btn-info btn-sm" href="#">
+                        <i class="fas fa-pencil-alt">
+                        </i>
+                        Editer
+                    </a>
+                    <a class="btn btn-danger btn-sm" href="#">
+                        <i class="fas fa-trash">
+                        </i>
+                        Supprimer
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    1
+                </td>
+                <td>
+                    <a>
+                        Vaccin contre la grippe
+                    </a>
+                </td>
+                <td>
+                    Obligatoire
+                </td>
+                <td>
+                    Tout les 3 jours.
+                </td>
+                <td>
+                     10/03/2020
+                </td>
+                <td>
+                   17/09/2020
+                </td>
+                <td class="project-actions text-right">
+                    <a class="btn btn-info btn-sm" href="#">
+                        <i class="fas fa-pencil-alt">
+                        </i>
+                        Editer
+                    </a>
+                    <a class="btn btn-danger btn-sm" href="#">
+                        <i class="fas fa-trash">
+                        </i>
+                        Supprimer
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    1
+                </td>
+                <td>
+                    <a>
+                        Vaccin contre la grippe
+                    </a>
+                </td>
+                <td>
+                    Obligatoire
+                </td>
+                <td>
+                    Tout les 3 jours.
+                </td>
+                <td>
+                     10/03/2020
+                </td>
+                <td>
+                   17/09/2020
+                </td>
+                <td class="project-actions text-right">
+                    <a class="btn btn-info btn-sm" href="#">
+                        <i class="fas fa-pencil-alt">
+                        </i>
+                        Editer
+                    </a>
+                    <a class="btn btn-danger btn-sm" href="#">
+                        <i class="fas fa-trash">
+                        </i>
+                        Supprimer
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    1
+                </td>
+                <td>
+                    <a>
+                        Vaccin contre la grippe
+                    </a>
+                </td>
+                <td>
+                    Obligatoire
+                </td>
+                <td>
+                    Tout les 3 jours.
+                </td>
+                <td>
+                     10/03/2020
+                </td>
+                <td>
+                   17/09/2020
+                </td>
+                <td class="project-actions text-right">
+                    <a class="btn btn-info btn-sm" href="#">
+                        <i class="fas fa-pencil-alt">
+                        </i>
+                        Editer
+                    </a>
+                    <a class="btn btn-danger btn-sm" href="#">
+                        <i class="fas fa-trash">
+                        </i>
+                        Supprimer
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    1
+                </td>
+                <td>
+                    <a>
+                        Vaccin contre la grippe
+                    </a>
+                </td>
+                <td>
+                    Obligatoire
+                </td>
+                <td>
+                    Tout les 3 jours.
+                </td>
+                <td>
+                     10/03/2020
+                </td>
+                <td>
+                   17/09/2020
+                </td>
+                <td class="project-actions text-right">
+                    <a class="btn btn-info btn-sm" href="#">
+                        <i class="fas fa-pencil-alt">
+                        </i>
+                        Editer
+                    </a>
+                    <a class="btn btn-danger btn-sm" href="#">
+                        <i class="fas fa-trash">
+                        </i>
+                        Supprimer
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    1
+                </td>
+                <td>
+                    <a>
+                        Vaccin contre la grippe
+                    </a>
+                </td>
+                <td>
+                    Obligatoire
+                </td>
+                <td>
+                    Tout les 3 jours.
+                </td>
+                <td>
+                     10/03/2020
+                </td>
+                <td>
+                   17/09/2020
+                </td>
+                <td class="project-actions text-right">
+                    <a class="btn btn-info btn-sm" href="#">
+                        <i class="fas fa-pencil-alt">
+                        </i>
+                        Editer
+                    </a>
+                    <a class="btn btn-danger btn-sm" href="#">
+                        <i class="fas fa-trash">
+                        </i>
+                        Supprimer
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    1
+                </td>
+                <td>
+                    <a>
+                        Vaccin contre la grippe
+                    </a>
+                </td>
+                <td>
+                    Obligatoire
+                </td>
+                <td>
+                    Tout les 3 jours.
+                </td>
+                <td>
+                     10/03/2020
+                </td>
+                <td>
+                   17/09/2020
+                </td>
+                <td class="project-actions text-right">
+                    <a class="btn btn-info btn-sm" href="#">
+                        <i class="fas fa-pencil-alt">
+                        </i>
+                        Editer
+                    </a>
+                    <a class="btn btn-danger btn-sm" href="#">
+                        <i class="fas fa-trash">
+                        </i>
+                        Supprimer
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    1
+                </td>
+                <td>
+                    <a>
+                        Vaccin contre la grippe
+                    </a>
+                </td>
+                <td>
+                    Obligatoire
+                </td>
+                <td>
+                    Tout les 3 jours.
+                </td>
+                <td>
+                     10/03/2020
+                </td>
+                <td>
+                   17/09/2020
+                </td>
+                <td class="project-actions text-right">
+                    <a class="btn btn-info btn-sm" href="#">
+                        <i class="fas fa-pencil-alt">
+                        </i>
+                        Editer
+                    </a>
+                    <a class="btn btn-danger btn-sm" href="#">
+                        <i class="fas fa-trash">
+                        </i>
+                        Supprimer
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    1
+                </td>
+                <td>
+                    <a>
+                        Vaccin contre la grippe
+                    </a>
+                </td>
+                <td>
+                    Obligatoire
+                </td>
+                <td>
+                    Tout les 3 jours.
+                </td>
+                <td>
+                     10/03/2020
+                </td>
+                <td>
+                   17/09/2020
+                </td>
+                <td class="project-actions text-right">
+                    <a class="btn btn-info btn-sm" href="#">
+                        <i class="fas fa-pencil-alt">
+                        </i>
+                        Editer
+                    </a>
+                    <a class="btn btn-danger btn-sm" href="#">
+                        <i class="fas fa-trash">
+                        </i>
+                        Supprimer
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    1
+                </td>
+                <td>
+                    <a>
+                        Vaccin contre la grippe
+                    </a>
+                </td>
+                <td>
+                    Obligatoire
+                </td>
+                <td>
+                    Tout les 3 jours.
+                </td>
+                <td>
+                     10/03/2020
+                </td>
+                <td>
+                   17/09/2020
+                </td>
+                <td class="project-actions text-right">
+                    <a class="btn btn-info btn-sm" href="#">
+                        <i class="fas fa-pencil-alt">
+                        </i>
+                        Editer
+                    </a>
+                    <a class="btn btn-danger btn-sm" href="#">
+                        <i class="fas fa-trash">
+                        </i>
+                        Supprimer
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+  </div>
+  <!-- /.card-body -->
+</div>
+<!-- /.card -->
 
-    <!-- Control Sidebar -->
-    <aside class="control-sidebar control-sidebar-dark">
-        <!-- Control sidebar content goes here -->
-    </aside>
-    <!-- /.control-sidebar -->
+</section>
+<!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+
+<!-- Control Sidebar -->
+<aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+</aside>
+<!-- /.control-sidebar -->
 </div>
 <!-- ./wrapper -->
 
@@ -66,3 +472,4 @@ include('src/template/header.php'); ?>
 </body>
 
 </html>
+  
