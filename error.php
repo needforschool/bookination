@@ -2,7 +2,8 @@
 require('src/inc/pdo.php');
 require('src/inc/functions.php');
 
-$title = 'errors - Page not found';
+$error = '404';
+$title = 'Erreur '.$error.' - Bookination';
 
 
 include('src/template/header.php');
