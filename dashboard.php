@@ -12,6 +12,8 @@ if (isLogged()) {
     die();
 }
 
+if (!empty($_POST['logout'])) logout();
+
 $errors = [];
 
 if (!empty($_POST['save'])) {
@@ -142,6 +144,9 @@ include('src/template/header.php');
                 <h3>Ajouter une injection</h3>
                 <a class="btn btn-purple" href="#"></a>
             </div>
+            <form action="" method="POST">
+                <input type="submit" name="logout" class="btn btn-purple logout" value="1"></input>
+            </form>
         </div>
     </div>
 </section>
