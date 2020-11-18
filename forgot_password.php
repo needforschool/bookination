@@ -45,8 +45,8 @@ if (!empty($_POST['submit'])) {
 
                 $mail->isHTML(true);
                 $mail->Subject = 'Récupération de mot de passe';
-                $mail->Body    = '<div style="text-align: center;"><h3>Récupération de mot de passe</h3><a href="' . $recoveryLink . '?mail=' . $user["mail"] . '?token=' . $user["token"] . '" style="color: #ff6b6b; text-decoration: none">Cliquez ici pour changez votre mot de passe</a></div>';
-                $mail->AltBody = 'Cliquez sur le lien pour récupérer votre mot de passe: ' . $recoveryLink . '?mail=' . $user["mail"] . '?token=' . $user["token"];
+                $mail->Body    = '<div style="text-align: center;"><h3>Récupération de mot de passe</h3><a href="' . $recoveryLink . '?mail=' . $user["mail"] . '&token=' . $user["token"] . '" style="color: #ff6b6b; text-decoration: none">Cliquez ici pour changez votre mot de passe</a></div>';
+                $mail->AltBody = 'Cliquez sur le lien pour récupérer votre mot de passe: ' . $recoveryLink . '?mail=' . $user["mail"] . '&token=' . $user["token"];
 
                 $mail->send();
                 $sent = true;
