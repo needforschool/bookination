@@ -20,7 +20,7 @@ include('src/template/header.php'); ?>
     <!-- /.content-header -->
     <section class="content">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <div class="card card-primary">
                     <div class="card-header">
                         <h3 class="card-title">Formulaire d'ajout</h3>
