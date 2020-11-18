@@ -29,8 +29,6 @@ include('src/template/header.php'); ?>
     <div class="card-tools">
       <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
         <i class="fas fa-minus"></i></button>
-      <button type="button" class="btn btn-tool" data-card-widget="remove" data-toggle="tooltip" title="Remove">
-        <i class="fas fa-times"></i></button>
     </div>
   </div>
   <div class="card-body p-0">
@@ -58,16 +56,16 @@ include('src/template/header.php'); ?>
                 <th style="width: 8.8%">
                      Date de naissance
                 </th>
-                <th style="width: 8.8%">
+                <th style="width: 6%">
                     Genre
                 </th>
                 <th style="width: 8.8%">
                     Date de création
                 </th>
-                <th style="width: 8,8%">
-                    Date de misa à jour
+                <th style="width: 15,2%">
+                    Date de màj
                 </th>
-                <th style="width: 8%" class="text-center">
+                <th style="width: 6%" class="text-center">
                     Rôle
                 </th>
                 <th style="width: 10%">
@@ -101,23 +99,23 @@ include('src/template/header.php'); ?>
                     </a>
                 </td>
                 <td>
-                    14/ 31 /2010
+                    14/31/2010
                 </td>
                 <td>
                     Mascululin
                 </td>
                 
                 <td>
-                    14/ 31 /2010
+                    14/31/2010
                 </td>
                 <td>
-                    14/ 31 /2018
+                    14/31/2018
                 </td>
                 <td class="project-state">
                     <span class="badge badge-success">Administrateur</span>
                 </td>
                 <td class="project-actions text-right">
-                    <a class="btn btn-info btn-sm" href="#">
+                    <a class="btn btn-info btn-sm" href="users_edit.php">
                         <i class="fas fa-pencil-alt">
                         </i>
                         Editer
@@ -153,23 +151,23 @@ include('src/template/header.php'); ?>
                     </a>
                 </td>
                 <td>
-                    14/ 31 /2010
+                    14/31/2010
                 </td>
                 <td>
                     Mascululin
                 </td>
                 
                 <td>
-                    14/ 31 /2010
+                    14/31/2010
                 </td>
                 <td>
-                    14/ 31 /2018
+                    14/31/2018
                 </td>
                 <td class="project-state">
                     <span class="badge badge-success">Administrateur</span>
                 </td>
                 <td class="project-actions text-right">
-                    <a class="btn btn-info btn-sm" href="#">
+                    <a class="btn btn-info btn-sm" href="users_edit.php">
                         <i class="fas fa-pencil-alt">
                         </i>
                         Editer
@@ -205,23 +203,23 @@ include('src/template/header.php'); ?>
                     </a>
                 </td>
                 <td>
-                    14/ 31 /2010
+                    14/31/2010
                 </td>
                 <td>
                     Mascululin
                 </td>
                 
                 <td>
-                    14/ 31 /2010
+                    14/31/2010
                 </td>
                 <td>
-                    14/ 31 /2018
+                    14/31/2018
                 </td>
                 <td class="project-state">
                     <span class="badge badge-success">Administrateur</span>
                 </td>
                 <td class="project-actions text-right">
-                    <a class="btn btn-info btn-sm" href="#">
+                    <a class="btn btn-info btn-sm" href="users_edit.php">
                         <i class="fas fa-pencil-alt">
                         </i>
                         Editer
@@ -257,23 +255,23 @@ include('src/template/header.php'); ?>
                     </a>
                 </td>
                 <td>
-                    14/ 31 /2010
+                    14/31/2010
                 </td>
                 <td>
                     Mascululin
                 </td>
                 
                 <td>
-                    14/ 31 /2010
+                    14/31/2010
                 </td>
                 <td>
-                    14/ 31 /2018
+                    14/31/2018
                 </td>
                 <td class="project-state">
                     <span class="badge badge-success">Administrateur</span>
                 </td>
                 <td class="project-actions text-right">
-                    <a class="btn btn-info btn-sm" href="#">
+                    <a class="btn btn-info btn-sm" href="users_edit.php">
                         <i class="fas fa-pencil-alt">
                         </i>
                         Editer
@@ -309,23 +307,23 @@ include('src/template/header.php'); ?>
                     </a>
                 </td>
                 <td>
-                    14/ 31 /2010
+                    14/31/2010
                 </td>
                 <td>
                     Mascululin
                 </td>
                 
                 <td>
-                    14/ 31 /2010
+                    14/31/2010
                 </td>
                 <td>
-                    14/ 31 /2018
+                    14/31/2018
                 </td>
                 <td class="project-state">
                     <span class="badge badge-success">Administrateur</span>
                 </td>
                 <td class="project-actions text-right">
-                    <a class="btn btn-info btn-sm" href="#">
+                    <a class="btn btn-info btn-sm" href="users_edit.php">
                         <i class="fas fa-pencil-alt">
                         </i>
                         Editer
@@ -361,23 +359,23 @@ include('src/template/header.php'); ?>
                     </a>
                 </td>
                 <td>
-                    14/ 31 /2010
+                    14/31/2010
                 </td>
                 <td>
                     Mascululin
                 </td>
                 
                 <td>
-                    14/ 31 /2010
+                    14/31/2010
                 </td>
                 <td>
-                    14/ 31 /2018
+                    14/31/2018
                 </td>
                 <td class="project-state">
                     <span class="badge badge-success">Administrateur</span>
                 </td>
                 <td class="project-actions text-right">
-                    <a class="btn btn-info btn-sm" href="#">
+                    <a class="btn btn-info btn-sm" href="users_edit.php">
                         <i class="fas fa-pencil-alt">
                         </i>
                         Editer
@@ -413,23 +411,23 @@ include('src/template/header.php'); ?>
                     </a>
                 </td>
                 <td>
-                    14/ 31 /2010
+                    14/31/2010
                 </td>
                 <td>
                     Mascululin
                 </td>
                 
                 <td>
-                    14/ 31 /2010
+                    14/31/2010
                 </td>
                 <td>
-                    14/ 31 /2018
+                    14/31/2018
                 </td>
                 <td class="project-state">
                     <span class="badge badge-success">Administrateur</span>
                 </td>
                 <td class="project-actions text-right">
-                    <a class="btn btn-info btn-sm" href="#">
+                    <a class="btn btn-info btn-sm" href="users_edit.php">
                         <i class="fas fa-pencil-alt">
                         </i>
                         Editer
@@ -465,23 +463,23 @@ include('src/template/header.php'); ?>
                     </a>
                 </td>
                 <td>
-                    14/ 31 /2010
+                    14/31/2010
                 </td>
                 <td>
                     Mascululin
                 </td>
                 
                 <td>
-                    14/ 31 /2010
+                    14/31/2010
                 </td>
                 <td>
-                    14/ 31 /2018
+                    14/31/2018
                 </td>
                 <td class="project-state">
                     <span class="badge badge-success">Administrateur</span>
                 </td>
                 <td class="project-actions text-right">
-                    <a class="btn btn-info btn-sm" href="#">
+                    <a class="btn btn-info btn-sm" href="users_edit.php">
                         <i class="fas fa-pencil-alt">
                         </i>
                         Editer
@@ -517,23 +515,23 @@ include('src/template/header.php'); ?>
                     </a>
                 </td>
                 <td>
-                    14/ 31 /2010
+                    14/31/2010
                 </td>
                 <td>
                     Mascululin
                 </td>
                 
                 <td>
-                    14/ 31 /2010
+                    14/31/2010
                 </td>
                 <td>
-                    14/ 31 /2018
+                    14/31/2018
                 </td>
                 <td class="project-state">
                     <span class="badge badge-success">Administrateur</span>
                 </td>
                 <td class="project-actions text-right">
-                    <a class="btn btn-info btn-sm" href="#">
+                    <a class="btn btn-info btn-sm" href="users_edit.php">
                         <i class="fas fa-pencil-alt">
                         </i>
                         Editer
@@ -569,23 +567,23 @@ include('src/template/header.php'); ?>
                     </a>
                 </td>
                 <td>
-                    14/ 31 /2010
+                    14/31/2010
                 </td>
                 <td>
                     Mascululin
                 </td>
                 
                 <td>
-                    14/ 31 /2010
+                    14/31/2010
                 </td>
                 <td>
-                    14/ 31 /2018
+                    14/31/2018
                 </td>
                 <td class="project-state">
                     <span class="badge badge-success">Administrateur</span>
                 </td>
                 <td class="project-actions text-right">
-                    <a class="btn btn-info btn-sm" href="#">
+                    <a class="btn btn-info btn-sm" href="users_edit.php">
                         <i class="fas fa-pencil-alt">
                         </i>
                         Editer

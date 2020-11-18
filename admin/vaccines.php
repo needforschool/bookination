@@ -30,8 +30,6 @@ include('src/template/header.php'); ?>
     <div class="card-tools">
       <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
         <i class="fas fa-minus"></i></button>
-      <button type="button" class="btn btn-tool" data-card-widget="remove" data-toggle="tooltip" title="Remove">
-        <i class="fas fa-times"></i></button>
     </div>
   </div>
   <div class="card-body p-0">
@@ -84,7 +82,7 @@ include('src/template/header.php'); ?>
                    17/09/2020
                 </td>
                 <td class="project-actions text-right">
-                    <a class="btn btn-info btn-sm" href="#">
+                    <a class="btn btn-info btn-sm" href="vaccines_edit.php">
                         <i class="fas fa-pencil-alt">
                         </i>
                         Editer
@@ -118,7 +116,7 @@ include('src/template/header.php'); ?>
                    17/09/2020
                 </td>
                 <td class="project-actions text-right">
-                    <a class="btn btn-info btn-sm" href="#">
+                    <a class="btn btn-info btn-sm" href="vaccines_edit.php">
                         <i class="fas fa-pencil-alt">
                         </i>
                         Editer
@@ -152,7 +150,7 @@ include('src/template/header.php'); ?>
                    17/09/2020
                 </td>
                 <td class="project-actions text-right">
-                    <a class="btn btn-info btn-sm" href="#">
+                    <a class="btn btn-info btn-sm" href="vaccines_edit.php">
                         <i class="fas fa-pencil-alt">
                         </i>
                         Editer
@@ -186,7 +184,7 @@ include('src/template/header.php'); ?>
                    17/09/2020
                 </td>
                 <td class="project-actions text-right">
-                    <a class="btn btn-info btn-sm" href="#">
+                    <a class="btn btn-info btn-sm" href="vaccines_edit.php">
                         <i class="fas fa-pencil-alt">
                         </i>
                         Editer
@@ -220,7 +218,7 @@ include('src/template/header.php'); ?>
                    17/09/2020
                 </td>
                 <td class="project-actions text-right">
-                    <a class="btn btn-info btn-sm" href="#">
+                    <a class="btn btn-info btn-sm" href="vaccines_edit.php">
                         <i class="fas fa-pencil-alt">
                         </i>
                         Editer
@@ -254,7 +252,7 @@ include('src/template/header.php'); ?>
                    17/09/2020
                 </td>
                 <td class="project-actions text-right">
-                    <a class="btn btn-info btn-sm" href="#">
+                    <a class="btn btn-info btn-sm" href="vaccines_edit.php">
                         <i class="fas fa-pencil-alt">
                         </i>
                         Editer
@@ -288,7 +286,7 @@ include('src/template/header.php'); ?>
                    17/09/2020
                 </td>
                 <td class="project-actions text-right">
-                    <a class="btn btn-info btn-sm" href="#">
+                    <a class="btn btn-info btn-sm" href="vaccines_edit.php">
                         <i class="fas fa-pencil-alt">
                         </i>
                         Editer
@@ -322,7 +320,7 @@ include('src/template/header.php'); ?>
                    17/09/2020
                 </td>
                 <td class="project-actions text-right">
-                    <a class="btn btn-info btn-sm" href="#">
+                    <a class="btn btn-info btn-sm" href="vaccines_edit.php">
                         <i class="fas fa-pencil-alt">
                         </i>
                         Editer
@@ -356,7 +354,7 @@ include('src/template/header.php'); ?>
                    17/09/2020
                 </td>
                 <td class="project-actions text-right">
-                    <a class="btn btn-info btn-sm" href="#">
+                    <a class="btn btn-info btn-sm" href="vaccines_edit.php">
                         <i class="fas fa-pencil-alt">
                         </i>
                         Editer
@@ -390,7 +388,7 @@ include('src/template/header.php'); ?>
                    17/09/2020
                 </td>
                 <td class="project-actions text-right">
-                    <a class="btn btn-info btn-sm" href="#">
+                    <a class="btn btn-info btn-sm" href="vaccines_edit.php">
                         <i class="fas fa-pencil-alt">
                         </i>
                         Editer
@@ -424,7 +422,7 @@ include('src/template/header.php'); ?>
                    17/09/2020
                 </td>
                 <td class="project-actions text-right">
-                    <a class="btn btn-info btn-sm" href="#">
+                    <a class="btn btn-info btn-sm" href="vaccines_edit.php">
                         <i class="fas fa-pencil-alt">
                         </i>
                         Editer
