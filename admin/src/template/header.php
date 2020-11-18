@@ -87,9 +87,21 @@ to get the desired effect
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a href="users_add.php" class="nav-link">
+                                <i class="nav-icon fas fa-plus"></i>
+                                <p>Nouvel utilisateur</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a href="vaccines.php" class="nav-link">
                                 <i class="nav-icon fas fa-syringe"></i>
                                 <p>Vaccins</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="vaccines_add.php" class="nav-link">
+                                <i class="nav-icon fas fa-plus"></i>
+                                <p>Nouveau vaccin</p>
                             </a>
                         </li>
                     </ul>
