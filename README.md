@@ -17,7 +17,7 @@ Bookination est un projet dans le cadre d'une formation [NFactory School](https:
 ```
 # Cloner le projet pour télécharger son contenu
 > cd projects/
-> git clone https://github.com/AntoineKM/nfactory-bookination
+> git clone https://github.com/AntoineKM/nfactory-bookination.git
 
 # Faire en sorte que Composer installe les dépendances du projet dans le dossier vendor/
 > cd nfactory-bookination/
