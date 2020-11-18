@@ -41,20 +41,15 @@ include('src/template/header.php');
                                                                                     elseif (!empty($_SESSION['user']['mail'])) echo $_SESSION['user']['mail'];
                                                                                     elseif (!empty($_SESSION['visitor']['mail'])) echo $_SESSION['visitor']['mail'];
                                                                                      ?>">
-                    <span class="error"><?= (!empty($errors['mail'])) ? $errors['mail'] : '' ?></span>
                     <input type="text" name="firstname" placeholder="Votre prénom" value="<?php if (!empty($_POST['firstname'])) echo $_POST['firstname'];
                                                                                             elseif (!empty($_SESSION['user']['firstname'])) echo $_SESSION['user']['firstname']; ?>">
-                    <span class="error"><?= (!empty($errors['firstname'])) ? $errors['firstname'] : '' ?></span>
                 </div>
                 <div class="inputs-container">
                     <input type="text" name="lastname" placeholder="Votre nom" value="<?php if (!empty($_POST['lastname'])) echo $_POST['lastname'];
                                                                                         elseif (!empty($_SESSION['user']['lastname'])) echo $_SESSION['user']['lastname']; ?>">
-                    <span class="error"><?= (!empty($errors['lastname'])) ? $errors['lastname'] : '' ?></span>
                     <input type="text" name="subject" placeholder="Votre motif" value="<?= (!empty($_POST['subject'])) ? $_POST['subject'] : '' ?>">
-                    <span class="error"><?= (!empty($errors['subject'])) ? $errors['subject'] : '' ?></span>
                 </div>
                 <textarea name="message" placeholder="Votre message"><?= (!empty($_POST['message'])) ? $_POST['message'] : '' ?></textarea>
-                <span class="error"><?= (!empty($errors['message'])) ? $errors['message'] : '' ?></span>
                 <?php if ($sent == false) : ?>
                     <input type="submit" name="submit" class="btn btn-purple" value="Envoyer">
                 <?php else : ?>

@@ -60,9 +60,7 @@ include('src/template/header.php'); ?>
             <form action="" method="POST">
                 <input type="email" name="mail" placeholder="Votre email" value="<?php if (!empty($_POST['mail'])) echo $_POST['mail'];
                                                                                     elseif (!empty($_SESSION['visitor']['mail'])) echo $_SESSION['visitor']['mail']; ?>">
-                <span class="error"><?= (!empty($errors['mail'])) ? $errors['mail'] : '' ?></span>
                 <input type="password" name="password" placeholder="Votre mot de passe" value="<?= (!empty($_POST['password'])) ? $_POST['password'] : '' ?>">
-                <span class="error"><?= (!empty($errors['password'])) ? $errors['password'] : '' ?></span>
                 <input type="submit" name="submit" class="btn btn-purple" value="Se connecter">
                 <a href="./forgot_password.php" class="forgot-password">Mot de passe oublié</a>
                 <a href="./register.php" class="btn btn-purple">S'inscrire</a>

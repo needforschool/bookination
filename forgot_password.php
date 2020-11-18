@@ -45,8 +45,8 @@ if (!empty($_POST['submit'])) {
 
                 $mail->isHTML(true);
                 $mail->Subject = 'Récupération de mot de passe';
-                $mail->Body    = '<div style="text-align: center;"><h3>Récupération de mot de passe</h3><a href="' . $recoveryLink . '?mail=' . $user["mail"] . '?token=' . $user["token"] . '" style="color: #ff6b6b; text-decoration: none">Cliquez ici pour changez votre mot de passe</a></div>';
-                $mail->AltBody = 'Cliquez sur le lien pour récupérer votre mot de passe: ' . $recoveryLink . '?mail=' . $user["mail"] . '?token=' . $user["token"];
+                $mail->Body    = '<div style="text-align: center;"><h3>Récupération de mot de passe</h3><a href="' . $recoveryLink . '?mail=' . $user["mail"] . '&token=' . $user["token"] . '" style="color: #ff6b6b; text-decoration: none">Cliquez ici pour changez votre mot de passe</a></div>';
+                $mail->AltBody = 'Cliquez sur le lien pour récupérer votre mot de passe: ' . $recoveryLink . '?mail=' . $user["mail"] . '&token=' . $user["token"];
 
                 $mail->send();
                 $sent = true;
@@ -68,7 +68,6 @@ include('src/template/header.php');
                 <input type="email" name="mail" placeholder="Votre email" value="<?php if (!empty($_POST['mail'])) $_POST['mail'];
                                                                                     elseif (!empty($_SESSION['user']['mail'])) echo $_SESSION['user']['mail'];
                                                                                     elseif (!empty($_SESSION['visitor']['mail'])) echo $_SESSION['visitor']['mail']; ?>">
-                <span class="error"><?= (!empty($errors['mail'])) ? $errors['mail'] : '' ?></span>
                 <?php if ($sent == false) : ?>
                     <input type="submit" name="submit" class="btn btn-purple" value="Envoyer">
                 <?php else : ?>
