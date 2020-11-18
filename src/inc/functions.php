@@ -10,6 +10,11 @@ function now()
     return (new \DateTime())->format('Y-m-d H:i:s');
 }
 
+function nowDate()
+{
+    return (new \DateTime())->format('Y-m-d');
+}
+
 /**
  * Vérifie et fix la faille XSS.
  * 
@@ -125,7 +130,7 @@ function insert($pdo, $table, $columns, $values)
 }
 
 /**
- * Séléctionne une valeur dans la table d'une base de donnée.
+ * Séléctionne une/des valeur(s) dans la table d'une base de donnée.
  * 
  * @param PDO $pdo
  * @param string $table
@@ -134,13 +139,26 @@ function insert($pdo, $table, $columns, $values)
  * @param string $whereValue
  * @return array<mixed>
  */
-function select($pdo, $table, $selectedColumn, $whereColumn, $whereValue)
+function select($pdo, $table, $selectedColumn = '*', $whereColumn = null, $whereValue = null)
 {
-    $sql = 'SELECT ' . $selectedColumn . ' FROM ' . $table . ' WHERE ' . $whereColumn . ' = :whereValue';
+    $sql = 'SELECT ' . $selectedColumn . ' FROM ' . $table;
+    if ($whereColumn && $whereValue) $sql .= ' WHERE ' . $whereColumn . ' = :whereValue';
     $query = $pdo->prepare($sql);
-    $query->bindValue(':whereValue', $whereValue);
+    if ($whereColumn && $whereValue) $query->bindValue(':whereValue', $whereValue);
     $query->execute();
     $result = $query->fetch();
+    return $result;
+}
+
+function selectAll($pdo, $table, $selectedColumn = '*', $whereColumn = null, $whereValue = null, $orderColumn = null, $order = null)
+{
+    $sql = 'SELECT ' . $selectedColumn . ' FROM ' . $table;
+    if ($whereColumn && $whereValue) $sql .= ' WHERE ' . $whereColumn . ' = :whereValue';
+    if ($orderColumn && $order) $sql .= ' ORDER BY ' . $orderColumn . ' ' . $order;
+    $query = $pdo->prepare($sql);
+    if ($whereColumn && $whereValue) $query->bindValue(':whereValue', $whereValue);
+    $query->execute();
+    $result = $query->fetchAll();
     return $result;
 }
 
@@ -150,6 +168,14 @@ function update($pdo, $table, $values, $whereColumn, $whereValue)
 
     $strValues = implode(', ', $values);
     $sql = 'UPDATE ' . $table . ' SET ' . $strValues . ' WHERE ' . $whereColumn . ' = :whereValue';
+    $query = $pdo->prepare($sql);
+    $query->bindValue(':whereValue', $whereValue);
+    $query->execute();
+}
+
+function delete($pdo, $table,  $whereColumn, $whereValue)
+{
+    $sql = 'DELETE FROM ' . $table . ' WHERE ' . $whereColumn . ' = ' . ':whereValue';
     $query = $pdo->prepare($sql);
     $query->bindValue(':whereValue', $whereValue);
     $query->execute();

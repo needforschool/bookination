@@ -17,7 +17,6 @@ if (!empty($_POST['logout'])) logout();
 $errors = [];
 
 if (!empty($_POST['save'])) {
-
     $firstname = checkXss($_POST['firstname']);
     $lastname = checkXss($_POST['lastname']);
     $gender = checkXss($_POST['gender']);
@@ -32,7 +31,6 @@ if (!empty($_POST['save'])) {
     $errors = checkField($errors, $mail, 'mail', 6, 160);
 
     if (count($errors) == 0) {
-        // TODO: update session
         $_SESSION['user'] = [
             'id' => $user['id'],
             'mail' => $mail,
@@ -43,7 +41,6 @@ if (!empty($_POST['save'])) {
             'role'   => $user['role'],
             'ip'     => $_SERVER['REMOTE_ADDR']
         ];
-        // TODO: update bdd
         update($pdo, 'bn_users', [
             'mail = "' . $mail . '"',
             'firstname = "' . $firstname . '"',
@@ -56,8 +53,45 @@ if (!empty($_POST['save'])) {
     }
 }
 
-// TODO: Button logout
-if (!empty($_POST['logout'])) logout();
+if (!empty($_POST['add'])) {
+    if (empty($_POST['vaccine'])) $_POST['vaccine'] = 1;
+
+    $vaccine = checkXss($_POST['vaccine']);
+    $lastInjection = checkXss($_POST['last_injection']);
+    $nextInjection = checkXss($_POST['next_injection']);
+
+    $errors = checkField($errors, $lastInjection, 'last_injection', 7, 10);
+    $errors = checkField($errors, $nextInjection, 'next_injection', 7, 10);
+
+    if (count($errors) == 0) {
+        insert(
+            $pdo,
+            'bn_reminders',
+            [
+                'user_id',
+                'vaccine_id',
+                'last_injection',
+                'reminder',
+                'created_at',
+                'updated_at'
+            ],
+            [
+                $user['id'],
+                $vaccine,
+                $lastInjection,
+                $nextInjection,
+                now(),
+                now()
+            ]
+        );
+    }
+}
+
+if (!empty($_GET['delete']) && is_numeric($_GET['delete']) && select($pdo, 'bn_reminders', '*', 'id', $_GET['delete'])) delete($pdo, 'bn_reminders', 'id', $_GET['delete']);
+
+$vaccines = selectAll($pdo, 'bn_vaccines');
+
+$reminders = selectAll($pdo, 'bn_reminders', '*', 'user_id', $user['id'], 'last_injection', 'DESC');
 
 $title = 'Tableau de bord - Bookination';
 include('src/template/header.php');
@@ -106,7 +140,7 @@ include('src/template/header.php');
                     <div class="profile-container">
                         <div class="profile-item">
                             <h3>Genre</h3>
-                            <select name="gender" value="<?= $user['gender'] ?>">
+                            <select name="gender">
                                 <option value="femme" <?= ($user['gender'] == 'femme') ? 'selected' : '' ?>>Femme</option>
                                 <option value="homme" <?= ($user['gender'] == 'homme') ? 'selected' : '' ?>>Homme</option>
                                 <option value="non-binaire" <?= ($user['gender'] == 'non-binaire') ? 'selected' : '' ?>>Non-binaire</option>
@@ -121,35 +155,54 @@ include('src/template/header.php');
                 <table>
                     <tr>
                         <th>Vaccin</th>
-                        <th>Description</th>
-                        <th>Nécessaire</th>
-                        <th>Dernière injection</th>
+                        <th>Fréquence</th>
+                        <th style="padding: 0 15px">Obligatoire</th>
+                        <th style="padding: 0 15px">Dernière injection</th>
                         <th>Prochaine injection</th>
                     </tr>
-                    <tr>
-                        <td>Lorem</td>
-                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, excepturi!</td>
-                        <td>Oui</td>
-                        <td>10/10/2010</td>
-                        <td>10/10/2010</td>
-                    </tr>
-                    <tr>
-                        <td>Lorem</td>
-                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, excepturi!</td>
-                        <td>Non</td>
-                        <td>10/10/2010</td>
-                        <td>10/10/2010</td>
-                    </tr>
+                    <?php foreach ($reminders as $r) : ?>
+                        <tr>
+                            <td><?= $vaccines[$r['vaccine_id']]['name'] ?></td>
+                            <td><?= $vaccines[$r['vaccine_id']]['frequency'] ?></td>
+                            <td><?= ($vaccines[$r['vaccine_id']]['mandatory']) ? 'Oui' : 'Non' ?></td>
+                            <td><?= date("d/m/Y", strtotime($r['last_injection'])) ?></td>
+                            <td><?= date("d/m/Y", strtotime($r['reminder'])) ?></td>
+                            <td><a href="?delete=<?= $r['id'] ?>">Supprimer</a></td>
+                        </tr>
+                    <?php endforeach; ?>
                 </table>
             </div>
         </div>
         <div class="sidebar">
-            <div class="prescription">
-                <h3>Ajouter une injection</h3>
-                <a class="btn btn-purple" href="#"></a>
-            </div>
-            <form action="" method="POST">
-                <input type="submit" name="logout" class="btn btn-purple logout" value="1"></input>
+            <?php if (empty($_POST['new'])) : ?>
+                <div class="prescription">
+                    <h3>Ajouter une injection</h3>
+                    <form action="" method="POST">
+                        <input type="submit" name="new" class="btn btn-purple" value="1"></input>
+                    </form>
+                </div>
+            <?php else : ?>
+                <form action="" method="POST" class="add">
+
+                    <label for="vaccine">Vaccin</label>
+                    <select name="vaccine">
+                        <option value="" disabled selected hidden>Types de vaccins</option>
+                        <?php foreach ($vaccines as $v) : ?>
+                            <option value="<?= $v['id'] ?>" style="color: #000"><?= $v['name'] ?></option>
+                        <?php endforeach; ?>
+                    </select>
+
+                    <label for="last_injection">Dernière injection</label>
+                    <input name="last_injection" type="date" value="<?= nowDate() ?>">
+
+                    <label for="next_injection">Prochaine injection</label>
+                    <input name="next_injection" type="date" value="<?= nowDate() ?>">
+
+                    <input type="submit" name="add" class="btn btn-purple" value="1"></input>
+                </form>
+            <?php endif; ?>
+            <form action="" method="POST" class="logout">
+                <input type="submit" name="logout" class="btn btn-purple" value="1"></input>
             </form>
         </div>
     </div>

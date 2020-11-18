@@ -114,7 +114,7 @@ include('src/template/header.php');
                     <span class="error"><?= (!empty($errors['firstname'])) ? $errors['firstname'] : '' ?></span>
                 </div>
                 <div class="inputs-container">
-                    <select name="gender" value="<?= (!empty($_POST['gender'])) ? $_POST['gender'] : '' ?>">
+                    <select name="gender">
                         <option value="" disabled <?= (!empty($_POST['gender'])) ? '' : 'selected' ?> hidden>Votre genre</option>
                         <option value="femme" <?= (!empty($_POST['gender']) && $_POST['gender'] == 'femme') ? 'selected' : '' ?>>Femme</option>
                         <option value="homme" <?= (!empty($_POST['gender']) && $_POST['gender'] == 'homme') ? 'selected' : '' ?>>Homme</option>
