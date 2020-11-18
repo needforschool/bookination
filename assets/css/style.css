@@ -1041,7 +1041,7 @@ img {
 }
 
 .errors-wrapper {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 100;
@@ -1058,7 +1058,7 @@ img {
 }
 
 .errors-wrapper .wrap-fluid .errors-container {
-    margin-left: auto;
+    margin: 0 10px 0 auto;
     padding-bottom: 25px;
     max-width: 20%;
 }
@@ -1175,6 +1175,9 @@ img {
         font-size: 30px;
         text-align: center;
         margin: 0 auto;
+    }
+    .errors-wrapper .wrap-fluid .errors-container {
+        max-width: 50%;
     }
 }
 
