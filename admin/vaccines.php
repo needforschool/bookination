@@ -2,6 +2,9 @@
 require('../src/inc/pdo.php');
 require('../src/inc/functions.php');
 
+$vaccines=selectAll($pdo, 'bn_vaccines');
+
+if (!empty($_GET['delete']) && is_numeric($_GET['delete']) && select($pdo, 'bn_vaccines', '*', 'id', $_GET['delete'])) delete($pdo, 'bn_vaccines', 'id', $_GET['delete']);
 
 
 include('src/template/header.php'); ?>
@@ -60,26 +63,25 @@ include('src/template/header.php'); ?>
             </tr>
         </thead>
         <tbody>
+        <?php foreach($vaccines as $vaccine):?>
             <tr>
                 <td>
-                    1
+                <?= $vaccine['id'] ?>
                 </td>
                 <td>
-                    <a>
-                        Vaccin contre la grippe
-                    </a>
+                <?= $vaccine['name'] ?>
                 </td>
                 <td>
-                    Obligatoire
+                <?= $vaccine['mandatory'] ?>
                 </td>
                 <td>
-                    Tout les 3 jours.
+                <?= $vaccine['frequency'] ?>
                 </td>
                 <td>
-                     10/03/2020
+                <?= $vaccine['created_at'] ?> 
                 </td>
                 <td>
-                   17/09/2020
+                <?= $vaccine['updated_at'] ?>
                 </td>
                 <td class="project-actions text-right">
                     <a class="btn btn-info btn-sm" href="vaccines_edit.php">
@@ -87,353 +89,14 @@ include('src/template/header.php'); ?>
                         </i>
                         Editer
                     </a>
-                    <a class="btn btn-danger btn-sm" href="#">
+                    <a class="btn btn-danger btn-sm" href="?delete=<?= $vaccine['id'] ?>">
                         <i class="fas fa-trash">
                         </i>
                         Supprimer
                     </a>
                 </td>
             </tr>
-            <tr>
-                <td>
-                    1
-                </td>
-                <td>
-                    <a>
-                        Vaccin contre la grippe
-                    </a>
-                </td>
-                <td>
-                    Obligatoire
-                </td>
-                <td>
-                    Tout les 3 jours.
-                </td>
-                <td>
-                     10/03/2020
-                </td>
-                <td>
-                   17/09/2020
-                </td>
-                <td class="project-actions text-right">
-                    <a class="btn btn-info btn-sm" href="vaccines_edit.php">
-                        <i class="fas fa-pencil-alt">
-                        </i>
-                        Editer
-                    </a>
-                    <a class="btn btn-danger btn-sm" href="#">
-                        <i class="fas fa-trash">
-                        </i>
-                        Supprimer
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    1
-                </td>
-                <td>
-                    <a>
-                        Vaccin contre la grippe
-                    </a>
-                </td>
-                <td>
-                    Obligatoire
-                </td>
-                <td>
-                    Tout les 3 jours.
-                </td>
-                <td>
-                     10/03/2020
-                </td>
-                <td>
-                   17/09/2020
-                </td>
-                <td class="project-actions text-right">
-                    <a class="btn btn-info btn-sm" href="vaccines_edit.php">
-                        <i class="fas fa-pencil-alt">
-                        </i>
-                        Editer
-                    </a>
-                    <a class="btn btn-danger btn-sm" href="#">
-                        <i class="fas fa-trash">
-                        </i>
-                        Supprimer
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    1
-                </td>
-                <td>
-                    <a>
-                        Vaccin contre la grippe
-                    </a>
-                </td>
-                <td>
-                    Obligatoire
-                </td>
-                <td>
-                    Tout les 3 jours.
-                </td>
-                <td>
-                     10/03/2020
-                </td>
-                <td>
-                   17/09/2020
-                </td>
-                <td class="project-actions text-right">
-                    <a class="btn btn-info btn-sm" href="vaccines_edit.php">
-                        <i class="fas fa-pencil-alt">
-                        </i>
-                        Editer
-                    </a>
-                    <a class="btn btn-danger btn-sm" href="#">
-                        <i class="fas fa-trash">
-                        </i>
-                        Supprimer
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    1
-                </td>
-                <td>
-                    <a>
-                        Vaccin contre la grippe
-                    </a>
-                </td>
-                <td>
-                    Obligatoire
-                </td>
-                <td>
-                    Tout les 3 jours.
-                </td>
-                <td>
-                     10/03/2020
-                </td>
-                <td>
-                   17/09/2020
-                </td>
-                <td class="project-actions text-right">
-                    <a class="btn btn-info btn-sm" href="vaccines_edit.php">
-                        <i class="fas fa-pencil-alt">
-                        </i>
-                        Editer
-                    </a>
-                    <a class="btn btn-danger btn-sm" href="#">
-                        <i class="fas fa-trash">
-                        </i>
-                        Supprimer
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    1
-                </td>
-                <td>
-                    <a>
-                        Vaccin contre la grippe
-                    </a>
-                </td>
-                <td>
-                    Obligatoire
-                </td>
-                <td>
-                    Tout les 3 jours.
-                </td>
-                <td>
-                     10/03/2020
-                </td>
-                <td>
-                   17/09/2020
-                </td>
-                <td class="project-actions text-right">
-                    <a class="btn btn-info btn-sm" href="vaccines_edit.php">
-                        <i class="fas fa-pencil-alt">
-                        </i>
-                        Editer
-                    </a>
-                    <a class="btn btn-danger btn-sm" href="#">
-                        <i class="fas fa-trash">
-                        </i>
-                        Supprimer
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    1
-                </td>
-                <td>
-                    <a>
-                        Vaccin contre la grippe
-                    </a>
-                </td>
-                <td>
-                    Obligatoire
-                </td>
-                <td>
-                    Tout les 3 jours.
-                </td>
-                <td>
-                     10/03/2020
-                </td>
-                <td>
-                   17/09/2020
-                </td>
-                <td class="project-actions text-right">
-                    <a class="btn btn-info btn-sm" href="vaccines_edit.php">
-                        <i class="fas fa-pencil-alt">
-                        </i>
-                        Editer
-                    </a>
-                    <a class="btn btn-danger btn-sm" href="#">
-                        <i class="fas fa-trash">
-                        </i>
-                        Supprimer
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    1
-                </td>
-                <td>
-                    <a>
-                        Vaccin contre la grippe
-                    </a>
-                </td>
-                <td>
-                    Obligatoire
-                </td>
-                <td>
-                    Tout les 3 jours.
-                </td>
-                <td>
-                     10/03/2020
-                </td>
-                <td>
-                   17/09/2020
-                </td>
-                <td class="project-actions text-right">
-                    <a class="btn btn-info btn-sm" href="vaccines_edit.php">
-                        <i class="fas fa-pencil-alt">
-                        </i>
-                        Editer
-                    </a>
-                    <a class="btn btn-danger btn-sm" href="#">
-                        <i class="fas fa-trash">
-                        </i>
-                        Supprimer
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    1
-                </td>
-                <td>
-                    <a>
-                        Vaccin contre la grippe
-                    </a>
-                </td>
-                <td>
-                    Obligatoire
-                </td>
-                <td>
-                    Tout les 3 jours.
-                </td>
-                <td>
-                     10/03/2020
-                </td>
-                <td>
-                   17/09/2020
-                </td>
-                <td class="project-actions text-right">
-                    <a class="btn btn-info btn-sm" href="vaccines_edit.php">
-                        <i class="fas fa-pencil-alt">
-                        </i>
-                        Editer
-                    </a>
-                    <a class="btn btn-danger btn-sm" href="#">
-                        <i class="fas fa-trash">
-                        </i>
-                        Supprimer
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    1
-                </td>
-                <td>
-                    <a>
-                        Vaccin contre la grippe
-                    </a>
-                </td>
-                <td>
-                    Obligatoire
-                </td>
-                <td>
-                    Tout les 3 jours.
-                </td>
-                <td>
-                     10/03/2020
-                </td>
-                <td>
-                   17/09/2020
-                </td>
-                <td class="project-actions text-right">
-                    <a class="btn btn-info btn-sm" href="vaccines_edit.php">
-                        <i class="fas fa-pencil-alt">
-                        </i>
-                        Editer
-                    </a>
-                    <a class="btn btn-danger btn-sm" href="#">
-                        <i class="fas fa-trash">
-                        </i>
-                        Supprimer
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    1
-                </td>
-                <td>
-                    <a>
-                        Vaccin contre la grippe
-                    </a>
-                </td>
-                <td>
-                    Obligatoire
-                </td>
-                <td>
-                    Tout les 3 jours.
-                </td>
-                <td>
-                     10/03/2020
-                </td>
-                <td>
-                   17/09/2020
-                </td>
-                <td class="project-actions text-right">
-                    <a class="btn btn-info btn-sm" href="vaccines_edit.php">
-                        <i class="fas fa-pencil-alt">
-                        </i>
-                        Editer
-                    </a>
-                    <a class="btn btn-danger btn-sm" href="#">
-                        <i class="fas fa-trash">
-                        </i>
-                        Supprimer
-                    </a>
-                </td>
-            </tr>
+        <?php endforeach; ?>
         </tbody>
     </table>
   </div>
