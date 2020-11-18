@@ -561,7 +561,7 @@ img {
 
 #dashboard .wrap-fluid .container .profile-card {
     display: flex;
-    height: 250px;
+    min-height: 250px;
     background-color: var(--white-secondary);
     border-radius: 25px;
     box-shadow: 0 0 10px rgba(0, 0, 0, .05);
@@ -597,6 +597,7 @@ img {
     display: flex;
     flex: 1;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -637,6 +638,7 @@ img {
 
 #dashboard .wrap-fluid .container .profile-card .profile .profile-container .profile-details input {
     width: 100%;
+    min-width: 100px;
     font-weight: var(--bold);
     font-size: 18px;
     color: var(--white);
@@ -690,6 +692,7 @@ img {
     padding: 25px;
     color: var(--black);
     flex-direction: column;
+    overflow: auto;
 }
 
 #dashboard .wrap-fluid .container .reminders-card table {
@@ -1125,6 +1128,9 @@ img {
     #home .wrap-fluid, #contact .wrap-fluid, #register .wrap-fluid, #login .wrap-fluid, #forgot_password .wrap-fluid, #recovery_password .wrap-fluid, #error .wrap-fluid {
         flex-direction: column-reverse;
     }
+    #dashboard .wrap-fluid {
+        flex-direction: column;
+    }
     #header .nav .navlogo {
         margin-right: 0;
         width: 50px;
@@ -1164,6 +1170,15 @@ img {
         box-shadow: none;
         color: var(--white);
         text-align: initial;
+    }
+    #dashboard .wrap-fluid .container .profile-card .profile-container .profile-item {
+        margin-top: 10px;
+    }
+    #dashboard .wrap-fluid .container .profile-card {
+        flex-direction: column;
+    }
+    #dashboard .wrap-fluid .sidebar {
+        margin-left: 0;
     }
     #errors .wrap-fluid {
         text-align: center;

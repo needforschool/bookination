@@ -118,7 +118,7 @@ include('src/template/header.php');
                     <div class="profile-container">
                         <div class="profile-item">
                             <h3>Rappels</h3>
-                            <p>8</p>
+                            <p><?= count($reminders) ?></p>
                         </div>
                     </div>
                 </div>
