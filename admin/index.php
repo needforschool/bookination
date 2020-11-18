@@ -40,12 +40,8 @@ include('src/template/header.php'); ?>
                                 <p class="ml-auto d-flex flex-column text-right">
                                     <span class="text-success">
                                         <i class="fas fa-arrow-up"></i> <?= (1 - 0 / count($users)) * 100; ?>%
-                                        <!--
-                                                        N ACTUEL(1)        X ACTUEL
-                                                        N LASTM(0)         P LASTM (100)
-                                        -->
                                     </span>
-                                    <span class="text-muted">Depuis la semaine dernière</span>
+                                    <span class="text-muted">Depuis la mois dernier</span>
                                 </p>
                             </div>
                             <!-- /.d-flex -->
@@ -56,11 +52,7 @@ include('src/template/header.php'); ?>
 
                             <div class="d-flex flex-row justify-content-end">
                                 <span class="mr-2">
-                                    <i class="fas fa-square text-primary"></i> Cette semaine
-                                </span>
-
-                                <span>
-                                    <i class="fas fa-square text-gray"></i> Semaine dernière
+                                    <i class="fas fa-square text-primary"></i> Cette année
                                 </span>
                             </div>
                         </div>
