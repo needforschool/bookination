@@ -89,6 +89,12 @@ function isLogged()
     return false;
 }
 
+function isAdmin()
+{
+    if (!empty($_SESSION['user']) && $_SESSION['user']['role'] == 'admin') return true;
+    return false;
+}
+
 function logout()
 {
     session_start();
