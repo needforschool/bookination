@@ -68,7 +68,6 @@ include('src/template/header.php');
                 <input type="email" name="mail" placeholder="Votre email" value="<?php if (!empty($_POST['mail'])) $_POST['mail'];
                                                                                     elseif (!empty($_SESSION['user']['mail'])) echo $_SESSION['user']['mail'];
                                                                                     elseif (!empty($_SESSION['visitor']['mail'])) echo $_SESSION['visitor']['mail']; ?>">
-                <span class="error"><?= (!empty($errors['mail'])) ? $errors['mail'] : '' ?></span>
                 <?php if ($sent == false) : ?>
                     <input type="submit" name="submit" class="btn btn-purple" value="Envoyer">
                 <?php else : ?>

@@ -109,9 +109,7 @@ include('src/template/header.php');
 
                 <div class="inputs-container">
                     <input type="text" name="lastname" placeholder="Votre nom" value="<?= (!empty($_POST['lastname'])) ? $_POST['lastname'] : '' ?>">
-                    <span class="error"><?= (!empty($errors['lastname'])) ? $errors['lastname'] : '' ?></span>
                     <input type="text" name="firstname" placeholder="Votre prénom" value="<?= (!empty($_POST['firstname'])) ? $_POST['firstname'] : '' ?>">
-                    <span class="error"><?= (!empty($errors['firstname'])) ? $errors['firstname'] : '' ?></span>
                 </div>
                 <div class="inputs-container">
                     <select name="gender">
@@ -122,16 +120,12 @@ include('src/template/header.php');
                         <option value="non-specifie" <?= (!empty($_POST['gender']) && $_POST['gender'] == 'non-specifie') ? 'selected' : '' ?>>Non-specifié</option>
                     </select>
                     <input type="date" name="birthdate" value="<?= (!empty($_POST['birthdate'])) ? $_POST['birthdate'] : '' ?>">
-                    <span class="error"><?= (!empty($errors['birthdate'])) ? $errors['birthdate'] : '' ?></span>
                 </div>
                 <input type="email" name="mail" placeholder="Votre email" value="<?php if (!empty($_POST['mail'])) echo $_POST['mail'];
                                                                                     elseif (!empty($_SESSION['visitor']['mail'])) echo $_SESSION['visitor']['mail']; ?>">
-                <span class="error"><?= (!empty($errors['mail'])) ? $errors['mail'] : '' ?></span>
                 <div class="inputs-container">
                     <input type="password" name="password" placeholder="Votre mot de passe" value="<?= (!empty($_POST['password'])) ? $_POST['password'] : '' ?>">
-                    <span class="error"><?= (!empty($errors['password'])) ? $errors['password'] : '' ?></span>
                     <input type="password" name="password-confirm" placeholder="Confirmation du mot de passe" value="<?= (!empty($_POST['password-confirm'])) ? $_POST['password-confirm'] : '' ?>">
-                    <span class="error"><?= (!empty($errors['password-confirm'])) ? $errors['password-confirm'] : '' ?></span>
                 </div>
                 <input type="submit" name="submit" class="btn btn-purple" value="S'inscrire">
                 <p>Vous possédez déjà un compte ?</p>
