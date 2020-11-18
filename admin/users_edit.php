@@ -2,7 +2,12 @@
 require('../src/inc/pdo.php');
 require('../src/inc/functions.php');
 
+session_start();
 
+if (!isAdmin()) {
+    header('Location: ./../error.php?e=403');
+    die();
+}
 
 include('src/template/header.php'); ?>
 
