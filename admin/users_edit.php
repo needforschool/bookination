@@ -2,7 +2,44 @@
 require('../src/inc/pdo.php');
 require('../src/inc/functions.php');
 
+if (!empty($_POST['users'])) { //à vérifier
+    
+    $mail = checkXss($_POST['mail']);
+    $password= checkXss($_POST['password']);
+    $token = checkXss($_POST['token']);
+    $firstname = checkXss($_POST['firstname']);
+    $lastname = checkXss($_POST['lastname']);
+    $birthdate = checkXss($_POST['birthdate']);
+    $gender= checkXss($_POST['gender']);
+    $role= checkXss($_POST['role']);
 
+    $mail = checkEmail($errors, $mail, 'mail', 6, 160);
+    $password = checkField($errors, $password, 'password', 6, 250);
+    $token = checkField($errors, $token, 'token', 4, 255);
+    $firstname = checkField($errors, $firstname, 'firstname', 7, 100);
+    $lastname = checkField($errors, $firstname, 'firstname', 7, 100);
+    $birthdate = checkField($errors, $birthdate, 'birthdate', 7, 10);
+    $gender = checkField($errors, $gender, 'gender', 4, 20);
+    $role = checkField($errors, $role, 'role', 6, 10 ); //à vérifier
+
+
+}
+
+    // $errors = [];   
+    // $errors = checkEmail($errors, $mail, 'mail');
+    // $errors = checkField($errors, $mail, 'mail', 6, 160);
+    // $errors = checkField($errors, $password, 'password', 6, 200);
+
+
+
+
+
+
+
+
+
+
+$title = 'Modification utilisateur - Bookination';
 
 include('src/template/header.php'); ?>
 

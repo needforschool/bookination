@@ -2,8 +2,68 @@
 require('../src/inc/pdo.php');
 require('../src/inc/functions.php');
 
+//chercher param id dans l'url (verifier qu'il est renseigné)
+if (!empty($_GET['id']) && is_numeric($_GET['id'])) {
+
+    $vaccine = select($pdo, 'bn_vaccines', '*', 'id', $_GET['id']);
+    if (!empty($vaccine)) {
+
+    } else {
+        header('Location: ./../error.php');
+        die();
+    }
+} else {
+    header('Location: ./../error.php');
+    die();
+}
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// if (!empty($_POST['submit'])) { //à vérifier
+
+//     $name= checkXss($_POST['name']);
+//     $frequency = checkXss($_POST['frequency']);
+//     $mandatory = checkXss($_POST['mandatory']);
+
+
+
+//     $name = checkEmail($errors, $name, 'name', 6, 100);
+//     $frequency = checkField($errors, $frequency, 'frequency', 6, 255);
+
+//     if (count($errors) == 0) {
+//         update($pdo, 'bn_vaccines', [
+//             'name = "' . $name . '"',=
+//             'frequency = "' . $frequency . '"',
+//             'mandatory = "' . $mandatory . '"',
+//             'updated_at = "' . now() . '"',
+//             'crearted_at = "' . now() . '"',
+//         ], 'vaccines', $vaccines['id']);  
+//         $vaccines = select($pdo, 'bn_vaccines', '*', 'id', $_SESSION['vaccines']['vaccines']);
+//     }
+// }
+
+
+
+
+
+
+
+
+
+$title = 'Modification vaccins- Bookination';
 include('src/template/header.php'); ?>
 
 <div class="content-wrapper">
@@ -53,7 +113,7 @@ include('src/template/header.php'); ?>
                             </div>
                             <div class="col-12">
                                 <a href="vaccines.php" class="btn btn-secondary">Annuler</a>
-                                <input type="submit" value="Modifier" class="btn btn-success float-right">
+                                <input type="submit" value="Modifier" class="btn btn-success float-right" name="submit">
                             </div>
                         </div>
                         <!-- /.card-body -->
