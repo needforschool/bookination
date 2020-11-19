@@ -223,6 +223,10 @@ img {
     align-items: center;
 }
 
+#header .nav .profilebar .admin {
+    margin-right: 10px;
+}
+
 /* home */
 
 #home {
@@ -547,6 +551,7 @@ img {
 #dashboard {
     display: flex;
     flex: 1;
+    padding-top: 10px;
 }
 
 #dashboard .wrap-fluid {
@@ -1140,6 +1145,13 @@ img {
     }
     #header .nav .navlogo img.navlogo-small {
         display: initial;
+    }
+    #header .nav .profilebar {
+        flex-direction: column;
+    }
+    #header .nav .profilebar .admin {
+        margin-right: 0;
+        margin-bottom: 5px;
     }
     #home .wrap-fluid .home-featured {
         text-align: center;

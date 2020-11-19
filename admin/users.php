@@ -9,9 +9,9 @@ if (!isAdmin()) {
     die();
 }
 
-$users = selectAll($pdo, 'bn_users');
+if (!empty($_GET['delete']) && is_numeric($_GET['delete']) && !empty(select($pdo, 'bn_users', '*', 'id', $_GET['delete']))) delete($pdo, 'bn_users', 'id', $_GET['delete']);
 
-if (!empty($_GET['delete']) && is_numeric($_GET['delete']) && select($pdo, 'bn_users', '*', 'id', $_GET['delete'])) delete($pdo, 'bn_users', 'id', $_GET['delete']);
+$users = selectAll($pdo, 'bn_users', '*', null, null, 'created_at', 'DESC');
 
 include('src/template/header.php'); ?>
 
@@ -30,101 +30,106 @@ include('src/template/header.php'); ?>
     <!-- Main content -->
     <section class="content">
 
-        <div class="card-tools">
-            <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
-                <i class="fas fa-minus"></i></button>
+        <!-- Default box -->
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Liste complete</h3>
+
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+                        <i class="fas fa-minus"></i></button>
+                </div>
+            </div>
+            <div class="card-body p-0">
+                <table class="table table-striped projects">
+                    <thead>
+                        <tr>
+                            <th style="width: 2%">
+                                #
+                            </th>
+                            <th style="width: 15%">
+                                Mail
+                            </th>
+                            <th style="width: 10%">
+                                Prénom
+                            </th>
+                            <th style="width: 10%">
+                                Nom
+                            </th>
+                            <th style="width: 10%">
+                                Date de naissance
+                            </th>
+                            <th style="width: 10%">
+                                Genre
+                            </th>
+                            <th style="width: 10%">
+                                Création
+                            </th>
+                            <th style="width: 10%">
+                                Mis à jour
+                            </th>
+                            <th style="width: 8%" class="text-center">
+                                Rôle
+                            </th>
+                            <th style="width: 15%">
+
+                            </th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($users as $user) : ?>
+                            <tr id="item-<?= $user['id'] ?>">
+                                <td>
+                                    <?= $user['id'] ?>
+                                </td>
+                                <td>
+                                    <?= $user['mail'] ?>
+                                </td>
+                                <td>
+                                    <?= $user['firstname'] ?>
+                                </td>
+                                <td>
+                                    <?= $user['lastname'] ?>
+                                </td>
+                                <td>
+                                    <?= $user['birthdate'] ?>
+                                </td>
+                                <td>
+                                    <?= $user['gender'] ?>
+                                </td>
+                                <td>
+                                    <?= $user['created_at'] ?>
+                                </td>
+                                <td>
+                                    <?= $user['updated_at'] ?>
+                                </td>
+                                <td class="project-state">
+                                    <?= $user['role'] ?>
+                                </td>
+                                <td class="project-actions text-right">
+                                    <a class="btn btn-info btn-sm" href="users_edit.php?id=<?= $user['id'] ?>">
+                                        <i class="fas fa-pencil-alt">
+                                        </i>
+                                        Editer
+                                    </a>
+                                    <a class="btn btn-danger btn-sm" href="?delete=<?= $user['id'] ?>">
+                                        <i class="fas fa-trash">
+                                        </i>
+                                        Supprimer
+                                    </a>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+            <!-- /.card-body -->
         </div>
-</div>
-<div class="card-body p-0">
-    <table class="table table-striped projects">
-        <thead>
-            <tr>
-                <th style="width: 2%">
-                    #
-                </th>
-                <th style="width: 15%">
-                    e-mail
-                </th>
-                <th style="width: 10%">
-                    Firstname
-                </th>
-                <th style="width: 10%">
-                    Lastname
-                </th>
-                <th style="width: 10%">
-                    Date de naissance
-                </th>
-                <th style="width: 10%">
-                    Genre
-                </th>
-                <th style="width: 10%">
-                    Date de création
-                </th>
-                <th style="width: 10%">
-                    Date de màj
-                </th>
-                <th style="width: 8%" class="text-center">
-                    Rôle
-                </th>
-                <th style="width: 15%">
+        <!-- /.card -->
 
-                </th>
-
-            </tr>
-        </thead>
-        <tbody>
-            <?php foreach ($users as $user) : ?>
-                <tr>
-                    <td>
-                        <?= $user['id'] ?>
-                    </td>
-                    <td>
-                        <?= $user['mail'] ?>
-                    </td>
-                    <td>
-                        <?= $user['firstname'] ?>
-                    </td>
-                    <td>
-                        <?= $user['lastname'] ?>
-                    </td>
-                    <td>
-                        <?= $user['birthdate'] ?>
-                    </td>
-                    <td>
-                        <?= $user['gender'] ?>
-                    </td>
-                    <td>
-                        <?= $user['created_at'] ?>
-                    </td>
-                    <td>
-                        <?= $user['updated_at'] ?>
-                    </td>
-                    <td class="project-state">
-                        <?= $user['role'] ?>
-                    </td>
-                    <td class="project-actions text-right">
-                        <a class="btn btn-info btn-sm" href="users_edit.php">
-                            <i class="fas fa-pencil-alt">
-                            </i>
-                            Editer
-                        </a>
-                        <a class="btn btn-danger btn-sm" href="?delete=<?= $user['id'] ?>">
-                            <i class="fas fa-trash">
-                            </i>
-                            Supprimer
-                        </a>
-                    </td>
-                </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
-</div>
-<!-- /.card-body -->
-</div>
-<!-- /.card -->
-
-</section>
-<!-- /.content -->
+    </section>
+    <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
 

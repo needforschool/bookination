@@ -48,7 +48,7 @@ include('src/template/header.php'); ?>
                                     <span class="text-success">
                                         <i class="fas fa-arrow-up"></i> <?= (1 - 0 / count($users)) * 100; ?>%
                                     </span>
-                                    <span class="text-muted">Depuis la mois dernier</span>
+                                    <span class="text-muted">Depuis le mois dernier</span>
                                 </p>
                             </div>
                             <!-- /.d-flex -->

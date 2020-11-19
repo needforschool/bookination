@@ -9,10 +9,9 @@ if (!isAdmin()) {
     die();
 }
 
-$vaccines = selectAll($pdo, 'bn_vaccines');
+if (!empty($_GET['delete']) && is_numeric($_GET['delete']) && !empty(select($pdo, 'bn_vaccines', '*', 'id', $_GET['delete']))) delete($pdo, 'bn_vaccines', 'id', $_GET['delete']);
 
-if (!empty($_GET['delete']) && is_numeric($_GET['delete']) && select($pdo, 'bn_vaccines', '*', 'id', $_GET['delete'])) delete($pdo, 'bn_vaccines', 'id', $_GET['delete']);
-
+$vaccines = selectAll($pdo, 'bn_vaccines', '*', null, null, 'created_at', 'DESC');
 
 include('src/template/header.php'); ?>
 
@@ -50,19 +49,19 @@ include('src/template/header.php'); ?>
                                 #
                             </th>
                             <th style="width: 10%">
-                                nom du vaccin
+                                Vaccin
                             </th>
-                            <th style="width: 10%">
-                                type
+                            <th style="width: 10%; text-align: center;">
+                                Obligatoire
                             </th>
                             <th style="width: 40%">
                                 Fréquence
                             </th>
                             <th style="width: 10%">
-                                Date de création
+                                Création
                             </th>
                             <th style="width: 10%">
-                                Date de mise à jour
+                                Mis à jour
                             </th>
                             <th style="width: 18%">
 
@@ -78,8 +77,8 @@ include('src/template/header.php'); ?>
                                 <td>
                                     <?= $vaccine['name'] ?>
                                 </td>
-                                <td>
-                                    <?= $vaccine['mandatory'] ?>
+                                <td style="text-align: center;">
+                                    <?= ($vaccine['mandatory'] == 1) ? 'Oui' : 'Non' ?>
                                 </td>
                                 <td>
                                     <?= $vaccine['frequency'] ?>
