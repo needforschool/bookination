@@ -2,7 +2,7 @@
 * Prefixed by https://autoprefixer.github.io
 * PostCSS: v7.0.29,
 * Autoprefixer: v9.7.6
-* Browsers: last 4 version
+* Browsers: last 6 version
 */
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -62,10 +62,11 @@ html, body {
     color: var(--white);
     height: 100%;
     width: 100%;
+    scrollbar-color: var(--dark-pink) var(--white-secondary);
 }
 
 body {
-    background-image: url('../img/background.svg');
+    background-image: url('../img/background.png');
     background-color: var(--pink);
     background-size: cover;
     background-position: 50% 50%;
@@ -78,6 +79,26 @@ body {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    /* vertical scrollbars */
+    height: 8px;
+    /* horizontal scrollbars */
+}
+
+::-webkit-scrollbar-track {
+    background: var(--white-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--dark-pink);
+    height: 10px;
+}
+
+::-webkit-scrollbar-track-piece {
+    height: 30px;
 }
 
 a {
@@ -950,7 +971,8 @@ img {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    overflow: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 #dashboard .wrap-fluid .container .reminders-card table {
