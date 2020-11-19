@@ -2,6 +2,8 @@
 require('src/inc/pdo.php');
 require('src/inc/functions.php');
 
+session_start();
+
 $error = 404;
 if (!empty($_GET['e']) && is_numeric($_GET['e']) && $_GET['e'] >= 400 && $_GET['e'] <= 527) $error = $_GET['e'];
 $message;
