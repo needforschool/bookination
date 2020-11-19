@@ -62,7 +62,7 @@ html, body {
     color: var(--white);
     height: 100%;
     width: 100%;
-    scrollbar-color: var(--dark-pink) var(--white-secondary);
+    scrollbar-color: var(--dark-pink) var(--pink);
 }
 
 body {
@@ -89,7 +89,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--white-secondary);
+    background: var(--pink);
 }
 
 ::-webkit-scrollbar-thumb {
