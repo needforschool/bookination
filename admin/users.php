@@ -9,10 +9,9 @@ if (!isAdmin()) {
     die();
 }
 
+if (!empty($_GET['delete']) && is_numeric($_GET['delete']) && !empty(select($pdo, 'bn_users', '*', 'id', $_GET['delete']))) delete($pdo, 'bn_users', 'id', $_GET['delete']);
+
 $users = selectAll($pdo, 'bn_users', '*', null, null, 'created_at', 'DESC');
-
-
-if (!empty($_GET['delete']) && is_numeric($_GET['delete']) && select($pdo, 'bn_users', '*', 'id', $_GET['delete'])) delete($pdo, 'bn_users', 'id', $_GET['delete']);
 
 include('src/template/header.php'); ?>
 
@@ -49,13 +48,13 @@ include('src/template/header.php'); ?>
                                 #
                             </th>
                             <th style="width: 15%">
-                                e-mail
+                                Mail
                             </th>
                             <th style="width: 10%">
-                                Firstname
+                                Prénom
                             </th>
                             <th style="width: 10%">
-                                Lastname
+                                Nom
                             </th>
                             <th style="width: 10%">
                                 Date de naissance
@@ -64,10 +63,10 @@ include('src/template/header.php'); ?>
                                 Genre
                             </th>
                             <th style="width: 10%">
-                                Date de création
+                                Création
                             </th>
                             <th style="width: 10%">
-                                Date de màj
+                                Mis à jour
                             </th>
                             <th style="width: 8%" class="text-center">
                                 Rôle

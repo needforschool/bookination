@@ -9,6 +9,41 @@ if (!isAdmin()) {
     die();
 }
 
+$errors = [];
+
+if (!empty($_POST['submit'])) {
+    if (empty($_POST['mandatory'])) $_POST['mandatory'] = 0;
+
+    $name = checkXss($_POST['name']);
+    $frequency = checkXss($_POST['frequency']);
+    $mandatory = checkXss($_POST['mandatory']);
+    $errors = checkField($errors, $name, 'name', 6, 100);
+    $errors = checkField($errors, $frequency, 'frequency', 6, 255);
+
+    if (count($errors) == 0) {
+        insert(
+            $pdo,
+            'bn_vaccines',
+            [
+                'name',
+                'mandatory',
+                'frequency',
+                'created_at',
+                'updated_at'
+            ],
+            [
+                $name,
+                $mandatory,
+                $frequency,
+                now(),
+                now()
+            ]
+        );
+        header('Location: ./vaccines.php');
+        die();
+    }
+}
+
 include('src/template/header.php'); ?>
 
 <div class="content-wrapper">
@@ -35,31 +70,30 @@ include('src/template/header.php'); ?>
                                 <i class="fas fa-minus"></i></button>
                         </div>
                     </div>
-                    <div class="card-body">
+                    <form class="card-body" method="POST" action="">
                         <div class="form-group">
                             <label for="name">Nom du vaccin</label>
-                            <input type="text" name="name" class="form-control" value="<?php if (!empty($_POST['name'])) echo $_POST['name']; ?>">
+                            <input type="text" name="name" class="form-control" value="<?= (!empty($_POST['name'])) ? $_POST['name'] : '' ?>">
                             <span class="error"><?= (!empty($errors['name'])) ? $errors['name'] : '' ?></span>
                         </div>
                         <div class="form-group">
-                            <label for="frequency">Description du vaccin</label>
-                            <textarea id="frequency" class="form-control" rows="4"></textarea>
+                            <label for="frequency">Fréquence</label>
+                            <textarea id="frequency" class="form-control" rows="4" name="frequency"><?= (!empty($_POST['frequency'])) ? $_POST['frequency'] : '' ?></textarea>
                             <span class="error"><?= (!empty($errors['frequency'])) ? $errors['frequency'] : '' ?></span>
                         </div>
                         <div class="form-group">
-                            <label for="mandat">Mendatory</label>
-                            <select class="form-control custom-select" name="mandat">
-                                <option value="">-- choisir le type de vaccin --</option>
-                                <option value="vert">Obligatoire</option>
-                                <option value="jaune">Non-obligatoire</option>
-                                <span class="error"><?= (!empty($errors['mandat'])) ? $errors['mandat'] : '' ?></span>
+                            <label for="mandat">Obligatoire</label>
+                            <select class="form-control custom-select" name="mandatory">
+                                <option value="1" <?= (!empty($_POST['mandatory']) && $_POST['mandatory'] == 1) ? ' selected' : '' ?>>Oui</option>
+                                <option value="0" <?= (isset($_POST['mandatory']) && $_POST['mandatory'] == 0) ? ' selected' : '' ?>>Non</option>
+                                <span class="error"><?= (!empty($errors['mandatory'])) ? $errors['mandatory'] : '' ?></span>
                             </select>
                         </div>
                         <div class="col-12">
                             <a href="vaccines_add.php" class="btn btn-secondary">Annuler</a>
-                            <input type="submit" value="Ajouter" class="btn btn-success float-right">
+                            <input type="submit" value="Ajouter" class="btn btn-success float-right" name="submit">
                         </div>
-                    </div>
+                    </form>
                     <!-- /.card-body -->
                 </div>
                 <!-- /.card -->
@@ -67,3 +101,28 @@ include('src/template/header.php'); ?>
         </div>
     </section>
 </div>
+
+<!-- Control Sidebar -->
+<aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+</aside>
+<!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- REQUIRED SCRIPTS -->
+
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE -->
+<script src="dist/js/adminlte.js"></script>
+
+<!-- OPTIONAL SCRIPTS -->
+<script src="plugins/chart.js/Chart.min.js"></script>
+<script src="dist/js/demo.js"></script>
+<script src="dist/js/pages/dashboard3.js"></script>
+</body>
+
+</html>
