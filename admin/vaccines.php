@@ -71,7 +71,7 @@ include('src/template/header.php'); ?>
                     </thead>
                     <tbody>
                         <?php foreach ($vaccines as $vaccine) : ?>
-                            <tr>
+                            <tr id="item-<?= $vaccine['id'] ?>">
                                 <td>
                                     <?= $vaccine['id'] ?>
                                 </td>
@@ -91,7 +91,7 @@ include('src/template/header.php'); ?>
                                     <?= $vaccine['updated_at'] ?>
                                 </td>
                                 <td class="project-actions text-right">
-                                    <a class="btn btn-info btn-sm" href="vaccines_edit.php">
+                                    <a class="btn btn-info btn-sm" href="vaccines_edit.php?id=<?= $vaccine['id'] ?>">
                                         <i class="fas fa-pencil-alt">
                                         </i>
                                         Editer
