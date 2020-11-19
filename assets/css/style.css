@@ -65,7 +65,7 @@ html, body {
 }
 
 body {
-    background-image: url('../img/background.png');
+    background-image: url('../img/background.svg');
     background-color: var(--pink);
     background-size: cover;
     background-position: 50% 50%;
@@ -76,8 +76,8 @@ body {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
 }
 
 a {
@@ -181,8 +181,8 @@ img {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
 }
 
 #header .nav {
@@ -198,8 +198,8 @@ img {
     display: flex;
     margin-right: 25px;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 #header .nav .navlogo img {
@@ -221,19 +221,19 @@ img {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 #header .nav .navbar li a {
     position: relative;
     margin: 0 25px;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -265,8 +265,8 @@ img {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 #header .nav .profilebar .admin {
@@ -280,8 +280,8 @@ img {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
 }
 
 #home .wrap-fluid {
@@ -295,12 +295,12 @@ img {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
 }
 
 #home .wrap-fluid .home-featured h1 {
@@ -328,8 +328,8 @@ img {
 
 #home .wrap-fluid .home-featured form input {
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
     border: none;
     outline: none;
     border-radius: 50px;
@@ -339,28 +339,28 @@ img {
 
 #home .wrap-fluid .home-image {
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 
 #home .wrap-fluid .home-image img {
     max-width: 80%;
     height: auto;
     -webkit-animation-name: zoomInDown;
-            animation-name: zoomInDown;
+    animation-name: zoomInDown;
     -webkit-animation-duration: 1s;
-            animation-duration: 1s;
+    animation-duration: 1s;
     -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
+    animation-fill-mode: both;
 }
 
 /* contact */
@@ -370,8 +370,8 @@ img {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
 }
 
 #contact .wrap-fluid {
@@ -382,14 +382,14 @@ img {
 
 #contact .wrap-fluid .contact-form {
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 #contact .wrap-fluid .contact-form form {
@@ -398,15 +398,15 @@ img {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     width: 500px;
 }
 
 #contact .wrap-fluid .contact-form form .inputs-container {
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -425,8 +425,8 @@ img {
     font-family: 'Montserrat', sans-serif;
     padding: 10px 15px;
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
     font-size: 15px;
 }
 
@@ -437,28 +437,28 @@ img {
 
 #contact .wrap-fluid .contact-image {
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 
 #contact .wrap-fluid .contact-image img {
     max-width: 80%;
     height: auto;
     -webkit-animation-name: zoomInDown;
-            animation-name: zoomInDown;
+    animation-name: zoomInDown;
     -webkit-animation-duration: 1s;
-            animation-duration: 1s;
+    animation-duration: 1s;
     -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
+    animation-fill-mode: both;
 }
 
 /* register */
@@ -468,8 +468,8 @@ img {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
 }
 
 #register .wrap-fluid {
@@ -480,14 +480,14 @@ img {
 
 #register .wrap-fluid .register-form {
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 #register .wrap-fluid .register-form form {
@@ -496,15 +496,15 @@ img {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     width: 500px;
 }
 
 #register .wrap-fluid .register-form form .inputs-container {
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -523,8 +523,8 @@ img {
     font-family: 'Montserrat', sans-serif;
     padding: 10px 15px;
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
     font-size: 15px;
     line-height: normal;
 }
@@ -538,34 +538,34 @@ img {
     border-radius: 12px;
     padding: 10px 15px;
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
 }
 
 #register .wrap-fluid .register-image {
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 
 #register .wrap-fluid .register-image img {
     max-width: 80%;
     height: auto;
     -webkit-animation-name: zoomInDown;
-            animation-name: zoomInDown;
+    animation-name: zoomInDown;
     -webkit-animation-duration: 1s;
-            animation-duration: 1s;
+    animation-duration: 1s;
     -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
+    animation-fill-mode: both;
 }
 
 #register .wrap-fluid .register-form form p {
@@ -582,8 +582,8 @@ img {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
 }
 
 #login .wrap-fluid {
@@ -594,14 +594,14 @@ img {
 
 #login .wrap-fluid .login-form {
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 #login .wrap-fluid .login-form form {
@@ -610,15 +610,15 @@ img {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     width: 500px;
 }
 
 #login .wrap-fluid .login-form form .inputs-container {
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -637,8 +637,8 @@ img {
     font-family: 'Montserrat', sans-serif;
     padding: 10px 15px;
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
     font-size: 15px;
     line-height: normal;
 }
@@ -649,8 +649,8 @@ img {
     display: flex;
     margin-bottom: 60px;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 #login .wrap-fluid .login-form form .forgot-password {
@@ -663,36 +663,36 @@ img {
 
 #login .wrap-fluid .login-image {
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 
 #login .wrap-fluid .login-image img {
     max-width: 80%;
     height: auto;
     -webkit-animation-name: zoomInDown;
-            animation-name: zoomInDown;
+    animation-name: zoomInDown;
     -webkit-animation-duration: 1s;
-            animation-duration: 1s;
+    animation-duration: 1s;
     -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
+    animation-fill-mode: both;
 }
 
 /* legal */
 
 #legal {
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
 }
 
 #legal .wrap-solid .legal-content {
@@ -704,7 +704,7 @@ img {
     line-height: 1.2;
     text-align: justify;
     -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .05);
-            box-shadow: 0 0 10px rgba(0, 0, 0, .05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .05);
 }
 
 #legal .wrap-solid .legal-content h1 {
@@ -738,8 +738,8 @@ img {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
     padding-top: 10px;
 }
 
@@ -751,15 +751,15 @@ img {
 
 #dashboard .wrap-fluid .container {
     -webkit-box-flex: 3;
-        -ms-flex: 3;
-            flex: 3;
+    -ms-flex: 3;
+    flex: 3;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
 }
 
 #dashboard .wrap-fluid .container .profile-card {
@@ -770,7 +770,7 @@ img {
     background-color: var(--white-secondary);
     border-radius: 25px;
     -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .05);
-            box-shadow: 0 0 10px rgba(0, 0, 0, .05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .05);
     border-radius: 30px;
 }
 
@@ -787,7 +787,7 @@ img {
 
 #dashboard .wrap-fluid .container .profile-card input[type="submit"] {
     -ms-flex-item-align: end;
-        align-self: flex-end;
+    align-self: flex-end;
     margin-left: auto;
 }
 
@@ -795,16 +795,16 @@ img {
     background-color: var(--dark-pink);
     border-radius: 25px;
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
     padding: 25px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
 }
 
 #dashboard .wrap-fluid .container .profile-card .profile-container {
@@ -812,16 +812,16 @@ img {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
 }
 
 #dashboard .wrap-fluid .container .profile-card .profile .profile-container .profile-avatar {
@@ -833,11 +833,11 @@ img {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     background-color: var(--pink);
 }
 
@@ -851,16 +851,16 @@ img {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
     padding: 0 15px;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     color: var(--white);
 }
 
@@ -896,8 +896,8 @@ img {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
 }
 
 #dashboard .wrap-fluid .container .profile-card .profile-container .profile-item h3 {
@@ -922,12 +922,12 @@ img {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-flex: 2;
-        -ms-flex: 2;
-            flex: 2;
+    -ms-flex: 2;
+    flex: 2;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     color: var(--black);
 }
 
@@ -937,19 +937,19 @@ img {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
     background-color: var(--white-secondary);
     border-radius: 25px;
     -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .05);
-            box-shadow: 0 0 10px rgba(0, 0, 0, .05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .05);
     border-radius: 30px;
     padding: 25px;
     color: var(--black);
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     overflow: auto;
 }
 
@@ -987,16 +987,16 @@ img {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     margin-left: 25px;
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
     color: var(--black);
     border-radius: 25px;
     -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .05);
-            box-shadow: 0 0 10px rgba(0, 0, 0, .05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .05);
     padding: 20px 20px;
 }
 
@@ -1021,8 +1021,8 @@ img {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
 }
 
 #dashboard .wrap-fluid .sidebar .prescription h3 {
@@ -1032,7 +1032,7 @@ img {
 
 #dashboard .wrap-fluid .sidebar .prescription form {
     -ms-flex-item-align: end;
-        align-self: flex-end;
+    align-self: flex-end;
     margin-top: auto;
 }
 
@@ -1048,7 +1048,7 @@ img {
 #dashboard .wrap-fluid .sidebar .prescription form .btn:hover {
     background-color: var(--black) !important;
     -webkit-filter: invert(1);
-            filter: invert(1);
+    filter: invert(1);
 }
 
 #dashboard .wrap-fluid .sidebar .add {
@@ -1064,8 +1064,8 @@ img {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
 }
 
 #dashboard .wrap-fluid .sidebar .add label {
@@ -1087,7 +1087,7 @@ img {
 
 #dashboard .wrap-fluid .sidebar input[type="date"]::-webkit-calendar-picker-indicator {
     -webkit-filter: invert(1);
-            filter: invert(1);
+    filter: invert(1);
 }
 
 #dashboard .wrap-fluid .sidebar .btn {
@@ -1114,7 +1114,7 @@ img {
 
 #dashboard .wrap-fluid .sidebar .logout {
     -ms-flex-item-align: end;
-        align-self: flex-end;
+    align-self: flex-end;
     margin-top: auto;
 }
 
@@ -1134,8 +1134,8 @@ img {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
 }
 
 #forgot_password .wrap-fluid {
@@ -1146,14 +1146,14 @@ img {
 
 #forgot_password .wrap-fluid .forgot-form {
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 #forgot_password .wrap-fluid .forgot-form form {
@@ -1162,15 +1162,15 @@ img {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     width: 500px;
 }
 
 #forgot_password .wrap-fluid .forgot-form form .inputs-container {
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1189,8 +1189,8 @@ img {
     font-family: 'Montserrat', sans-serif;
     padding: 10px 15px;
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
     font-size: 15px;
     line-height: normal;
 }
@@ -1201,34 +1201,34 @@ img {
     display: flex;
     margin-bottom: 60px;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 #forgot_password .wrap-fluid .forgot-image {
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 
 #forgot_password .wrap-fluid .forgot-image img {
     max-width: 80%;
     height: auto;
     -webkit-animation-name: zoomInDown;
-            animation-name: zoomInDown;
+    animation-name: zoomInDown;
     -webkit-animation-duration: 1s;
-            animation-duration: 1s;
+    animation-duration: 1s;
     -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
+    animation-fill-mode: both;
 }
 
 /* recovery_forgot_password */
@@ -1238,8 +1238,8 @@ img {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
 }
 
 #recovery_password .wrap-fluid {
@@ -1250,14 +1250,14 @@ img {
 
 #recovery_password .wrap-fluid .recovery-form {
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 #recovery_password .wrap-fluid .recovery-form form {
@@ -1266,15 +1266,15 @@ img {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     width: 500px;
 }
 
 #recovery_password .wrap-fluid .recovery-form form .inputs-container {
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1293,8 +1293,8 @@ img {
     font-family: 'Montserrat', sans-serif;
     padding: 10px 15px;
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
     font-size: 15px;
     line-height: normal;
 }
@@ -1305,34 +1305,34 @@ img {
     display: flex;
     margin-bottom: 60px;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 #recovery_password .wrap-fluid .recovery-image {
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 
 #recovery_password .wrap-fluid .recovery-image img {
     max-width: 80%;
     height: auto;
     -webkit-animation-name: zoomInDown;
-            animation-name: zoomInDown;
+    animation-name: zoomInDown;
     -webkit-animation-duration: 1s;
-            animation-duration: 1s;
+    animation-duration: 1s;
     -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
+    animation-fill-mode: both;
 }
 
 /* errors */
@@ -1342,8 +1342,8 @@ img {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
 }
 
 #error .wrap-fluid {
@@ -1357,19 +1357,19 @@ img {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     text-align: center;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 
 #error .wrap-fluid .error-text h1 {
@@ -1384,28 +1384,28 @@ img {
 
 #error .wrap-fluid .error-image {
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 
 #error .wrap-fluid .error-image img {
     max-width: 80%;
     height: auto;
     -webkit-animation-name: zoomInDown;
-            animation-name: zoomInDown;
+    animation-name: zoomInDown;
     -webkit-animation-duration: 1s;
-            animation-duration: 1s;
+    animation-duration: 1s;
     -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
+    animation-fill-mode: both;
 }
 
 /* footer */
@@ -1420,8 +1420,8 @@ img {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     font-size: 12px;
 }
 
@@ -1448,14 +1448,14 @@ img {
 
 .errors-wrapper .wrap-fluid {
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
 }
 
 .errors-wrapper .wrap-fluid .errors-container {
@@ -1475,11 +1475,11 @@ img {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     text-align: center;
 }
 
@@ -1533,14 +1533,14 @@ img {
     #home .wrap-fluid, #contact .wrap-fluid, #register .wrap-fluid, #login .wrap-fluid, #forgot_password .wrap-fluid, #recovery_password .wrap-fluid, #error .wrap-fluid {
         -webkit-box-orient: vertical;
         -webkit-box-direction: reverse;
-            -ms-flex-direction: column-reverse;
-                flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
     }
     #dashboard .wrap-fluid {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
     }
     #header .nav .navlogo {
         margin-right: 0;
@@ -1555,8 +1555,8 @@ img {
     #header .nav .profilebar {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
     }
     #header .nav .profilebar .admin {
         margin-right: 0;
@@ -1565,8 +1565,8 @@ img {
     #home .wrap-fluid .home-featured {
         text-align: center;
         -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
         margin-bottom: 50px;
     }
     #home .wrap-fluid .home-featured form {
@@ -1577,8 +1577,8 @@ img {
     }
     #contact .wrap-fluid .contact-form, #register .wrap-fluid .register-form, #login .wrap-fluid .login-form, #forgot_password .wrap-fluid .forgot-form, #recovery_password .wrap-fluid .recovery-form {
         -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
     }
     #contact .wrap-fluid .contact-form form, #register .wrap-fluid .register-form form, #login .wrap-fluid .login-form form, #forgot_password .wrap-fluid .forgot-form form, #recovery_password .wrap-fluid .recovery-form form {
         margin: 20px 0;
@@ -1587,8 +1587,8 @@ img {
     #contact .wrap-fluid .contact-form form .inputs-container, #register .wrap-fluid .register-form form .inputs-container, #login .wrap-fluid .login-form form, #forgot_password .wrap-fluid .forgot-form form .inputs-container, #recovery_password .wrap-fluid .recovery-form form .inputs-container {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
     }
     #contact .wrap-fluid .contact-form form .inputs-container input:first-child, #register .wrap-fluid .register-form form .inputs-container input:first-child, #register .wrap-fluid .register-form form .inputs-container select:first-child, #forgot_password .wrap-fluid .forgot-form form .inputs-container select:first-child, #recovery_password .wrap-fluid .recovery-form form .inputs-container select:first-child {
         margin-right: 0;
@@ -1596,7 +1596,7 @@ img {
     #legal .wrap-solid .legal-content {
         background-color: transparent;
         -webkit-box-shadow: none;
-                box-shadow: none;
+        box-shadow: none;
         color: var(--white);
         text-align: initial;
     }
@@ -1606,8 +1606,8 @@ img {
     #dashboard .wrap-fluid .container .profile-card {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
     }
     #dashboard .wrap-fluid .sidebar {
         margin-left: 0;
@@ -1615,8 +1615,8 @@ img {
     #errors .wrap-fluid {
         text-align: center;
         -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
         margin-bottom: 50px;
         margin: 0 auto;
     }
