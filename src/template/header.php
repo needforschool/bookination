@@ -24,6 +24,9 @@
                     <li><a href="./contact.php">Contact</a></li>
                 </ul>
                 <div class="profilebar">
+                    <?php if (isAdmin()) : ?>
+                        <a href="./admin" class="btn btn-login admin">Admin</a>
+                    <?php endif; ?>
                     <a href="<?= (isLogged()) ? './dashboard.php' : './login.php' ?>" class="btn btn-login"><?= (isLogged()) ? 'Tableau de bord' : 'Se connecter' ?></a>
                 </div>
             </div>
