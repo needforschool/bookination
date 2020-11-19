@@ -55,6 +55,7 @@ html, body {
     color: var(--white);
     height: 100%;
     width: 100%;
+    scrollbar-color: var(--dark-pink) var(--white);
 }
 
 body {
@@ -66,6 +67,26 @@ body {
     background-attachment: fixed;
     display: flex;
     flex-direction: column;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    /* vertical scrollbars */
+    height: 8px;
+    /* horizontal scrollbars */
+}
+
+::-webkit-scrollbar-track {
+    background: var(--white);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--dark-pink);
+    height: 10px;
+}
+
+::-webkit-scrollbar-track-piece {
+    height: 30px;
 }
 
 a {
