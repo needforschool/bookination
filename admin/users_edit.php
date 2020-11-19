@@ -2,16 +2,24 @@
 require('../src/inc/pdo.php');
 require('../src/inc/functions.php');
 
+
+session_start();
+
+if (!isAdmin()) {
+    header('Location: ./../error.php?e=403');
+    die();
+}
+
 if (!empty($_POST['users'])) { //à vérifier
-    
+
     $mail = checkXss($_POST['mail']);
-    $password= checkXss($_POST['password']);
+    $password = checkXss($_POST['password']);
     $token = checkXss($_POST['token']);
     $firstname = checkXss($_POST['firstname']);
     $lastname = checkXss($_POST['lastname']);
     $birthdate = checkXss($_POST['birthdate']);
-    $gender= checkXss($_POST['gender']);
-    $role= checkXss($_POST['role']);
+    $gender = checkXss($_POST['gender']);
+    $role = checkXss($_POST['role']);
 
     $mail = checkEmail($errors, $mail, 'mail', 6, 160);
     $password = checkField($errors, $password, 'password', 6, 250);
@@ -20,15 +28,16 @@ if (!empty($_POST['users'])) { //à vérifier
     $lastname = checkField($errors, $firstname, 'firstname', 7, 100);
     $birthdate = checkField($errors, $birthdate, 'birthdate', 7, 10);
     $gender = checkField($errors, $gender, 'gender', 4, 20);
-    $role = checkField($errors, $role, 'role', 6, 10 ); //à vérifier
+    $role = checkField($errors, $role, 'role', 6, 10); //à vérifier
 
 
 }
 
-    // $errors = [];   
-    // $errors = checkEmail($errors, $mail, 'mail');
-    // $errors = checkField($errors, $mail, 'mail', 6, 160);
-    // $errors = checkField($errors, $password, 'password', 6, 200);
+// $errors = [];   
+// $errors = checkEmail($errors, $mail, 'mail');
+// $errors = checkField($errors, $mail, 'mail', 6, 160);
+// $errors = checkField($errors, $password, 'password', 6, 200);
+
 
 
 
@@ -40,7 +49,6 @@ if (!empty($_POST['users'])) { //à vérifier
 
 
 $title = 'Modification utilisateur - Bookination';
-
 include('src/template/header.php'); ?>
 
 <div class="content-wrapper">
@@ -113,9 +121,9 @@ include('src/template/header.php'); ?>
                             </select>
                         </div>
                         <div class="col-12">
-                                <a href="users.php" class="btn btn-secondary">Annuler</a>
-                                <input type="submit" value="Modifier" class="btn btn-success float-right">
-                            </div>
+                            <a href="users.php" class="btn btn-secondary">Annuler</a>
+                            <input type="submit" value="Modifier" class="btn btn-success float-right">
+                        </div>
                     </div>
                     <!-- /.card-body -->
                 </div>

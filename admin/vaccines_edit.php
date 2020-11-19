@@ -2,12 +2,18 @@
 require('../src/inc/pdo.php');
 require('../src/inc/functions.php');
 
+session_start();
+
+if (!isAdmin()) {
+    header('Location: ./../error.php?e=403');
+    die();
+}
+
 //chercher param id dans l'url (verifier qu'il est renseigné)
 if (!empty($_GET['id']) && is_numeric($_GET['id'])) {
 
     $vaccine = select($pdo, 'bn_vaccines', '*', 'id', $_GET['id']);
     if (!empty($vaccine)) {
-
     } else {
         header('Location: ./../error.php');
         die();
