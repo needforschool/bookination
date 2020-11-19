@@ -11,6 +11,7 @@ if (!isAdmin()) {
 
 $users = selectAll($pdo, 'bn_users', '*', null, null, 'created_at', 'DESC');
 
+
 if (!empty($_GET['delete']) && is_numeric($_GET['delete']) && select($pdo, 'bn_users', '*', 'id', $_GET['delete'])) delete($pdo, 'bn_users', 'id', $_GET['delete']);
 
 include('src/template/header.php'); ?>
