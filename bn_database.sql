@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mar. 17 nov. 2020 à 11:04
+-- Généré le : jeu. 19 nov. 2020 à 11:50
 -- Version du serveur :  10.4.14-MariaDB
 -- Version de PHP : 7.4.11
 
@@ -126,7 +126,8 @@ ALTER TABLE `bn_reminders`
 -- Index pour la table `bn_users`
 --
 ALTER TABLE `bn_users`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `mail` (`mail`);
 
 --
 -- Index pour la table `bn_vaccines`
