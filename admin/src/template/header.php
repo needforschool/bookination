@@ -41,9 +41,6 @@ to get the desired effect
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="./../" class="nav-link">Home</a>
                 </li>
-                <li class="nav-item d-none d-sm-inline-block">
-                    <a href="./../contact.php" class="nav-link">Contact</a>
-                </li>
             </ul>
         </nav>
         <!-- /.navbar -->
@@ -99,6 +96,12 @@ to get the desired effect
                             <a href="vaccines_add.php" class="nav-link">
                                 <i class="nav-icon fas fa-plus"></i>
                                 <p>Nouveau vaccin</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contact.php" class="nav-link">
+                                <i class="nav-icon fas fa-envelope-open-text"></i>
+                                <p>Messages</p>
                             </a>
                         </li>
                     </ul>
