@@ -32,23 +32,6 @@ if (!empty($_POST['users'])) { //à vérifier
 
 
 }
-
-// $errors = [];   
-// $errors = checkEmail($errors, $mail, 'mail');
-// $errors = checkField($errors, $mail, 'mail', 6, 160);
-// $errors = checkField($errors, $password, 'password', 6, 200);
-
-
-
-
-
-
-
-
-
-
-
-$title = 'Modification utilisateur - Bookination';
 include('src/template/header.php'); ?>
 
 <div class="content-wrapper">
