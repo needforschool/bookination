@@ -5,8 +5,7 @@ use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 use Symfony\Component\Dotenv\Dotenv;
 
-require 'vendor/autoload.php';
-
+require('vendor/autoload.php');
 require('src/inc/pdo.php');
 require('src/inc/functions.php');
 

@@ -2,6 +2,8 @@
 require('src/inc/pdo.php');
 require('src/inc/functions.php');
 
+session_start();
+
 $errors = [];
 
 if (!empty($_GET['mail']) && !empty($_GET['token']) && filter_var($_GET['mail'], FILTER_VALIDATE_EMAIL)) {

@@ -2,6 +2,8 @@
 require('src/inc/pdo.php');
 require('src/inc/functions.php');
 
+session_start();
+
 $title = 'Mentions légales - Bookination';
 include('src/template/header.php');?>
 
