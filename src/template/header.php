@@ -25,7 +25,7 @@
                 </ul>
                 <div class="profilebar">
                     <?php if (isAdmin()) : ?>
-                        <a href="./admin" class="btn btn-login admin">Admin</a>
+                        <a href="./admin" target="blank" class="btn btn-login admin">Admin</a>
                     <?php endif; ?>
                     <a href="<?= (isLogged()) ? './dashboard.php' : './login.php' ?>" class="btn btn-login"><?= (isLogged()) ? 'Tableau de bord' : 'Se connecter' ?></a>
                 </div>
