@@ -9,7 +9,7 @@ if (!isAdmin()) {
     die();
 }
 
-$vaccines = selectAll($pdo, 'bn_vaccines');
+$vaccines = selectAll($pdo, 'bn_vaccines', '*', null, null, 'created_at', 'DESC');
 
 if (!empty($_GET['delete']) && is_numeric($_GET['delete']) && select($pdo, 'bn_vaccines', '*', 'id', $_GET['delete'])) delete($pdo, 'bn_vaccines', 'id', $_GET['delete']);
 
