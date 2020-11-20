@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Donne l'heure exacte, cela évite d'utiliser la foncion SQL si le serveur n'est pas configuré.
+ * Donne l'heure exacte en format (Y-m-d H:i:s), cela évite d'utiliser la foncion SQL si le serveur n'est pas configuré.
  * 
  * @return string
  */
@@ -10,6 +10,11 @@ function now()
     return (new \DateTime())->format('Y-m-d H:i:s');
 }
 
+/**
+ * Donne la date exacte en format (Y-m-d), cela évite d'utiliser la foncion SQL si le serveur n'est pas configuré.
+ * 
+ * @return string
+ */
 function nowDate()
 {
     return (new \DateTime())->format('Y-m-d');
@@ -64,6 +69,12 @@ function checkEmail($errors, $data, $key)
     return $errors;
 }
 
+/**
+ * Génère une chaine de caractères aléatoire.
+ * 
+ * @param int $length
+ * @return array<string>
+ */
 function generateRandomString($length = 10)
 {
     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -75,6 +86,12 @@ function generateRandomString($length = 10)
     return $randomString;
 }
 
+/**
+ * Calcule la différence entre la date actuelle et la date renseigné.
+ * 
+ * @param string $birthDate
+ * @return int
+ */
 function calculateAge($birthDate)
 {
     $date = new DateTime($birthDate);
@@ -83,18 +100,39 @@ function calculateAge($birthDate)
     return $interval->y;
 }
 
+/**
+ * Session
+ */
+
+/**
+ * Vérifie si un utilisateur est connecté.
+ * 
+ * @return bool
+ */
 function isLogged()
 {
+    session_start();
     if (!empty($_SESSION['user'])) return true;
     return false;
 }
 
+/**
+ * Vérifie si un utilisateur est connecté en tant qu'administrateur.
+ * 
+ * @return bool
+ */
 function isAdmin()
 {
+    session_start();
     if (!empty($_SESSION['user']) && $_SESSION['user']['role'] == 'admin') return true;
     return false;
 }
 
+/**
+ * Déconnecte l'utilisateur actuel.
+ * 
+ * @return void
+ */
 function logout()
 {
     session_start();
@@ -136,14 +174,14 @@ function insert($pdo, $table, $columns, $values)
 }
 
 /**
- * Séléctionne une/des valeur(s) dans la table d'une base de donnée.
+ * Séléctionne une valeur dans la table d'une base de donnée.
  * 
  * @param PDO $pdo
  * @param string $table
  * @param string $selectedColumn
  * @param string $whereColumn
  * @param string $whereValue
- * @return array<mixed>
+ * @return mixed
  */
 function select($pdo, $table, $selectedColumn = '*', $whereColumn = null, $whereValue = null)
 {
@@ -156,6 +194,18 @@ function select($pdo, $table, $selectedColumn = '*', $whereColumn = null, $where
     return $result;
 }
 
+/**
+ * Séléctionne des valeurs dans la table d'une base de donnée.
+ * 
+ * @param PDO $pdo
+ * @param string $table
+ * @param string $selectedColumn
+ * @param string $whereColumn
+ * @param string $whereValue
+ * @param string $orderColumn
+ * @param string $order
+ * @return array
+ */
 function selectAll($pdo, $table, $selectedColumn = '*', $whereColumn = null, $whereValue = null, $orderColumn = null, $order = null)
 {
     $sql = 'SELECT ' . $selectedColumn . ' FROM ' . $table;
@@ -168,6 +218,16 @@ function selectAll($pdo, $table, $selectedColumn = '*', $whereColumn = null, $wh
     return $result;
 }
 
+/**
+ * Met à jour des valeurs dans la table d'une base de donnée.
+ * 
+ * @param PDO $pdo
+ * @param string $table
+ * @param array<string> $values
+ * @param string $whereColumn
+ * @param string $whereValue
+ * @return void
+ */
 function update($pdo, $table, $values, $whereColumn, $whereValue)
 {
     if (!is_array($values)) return;
@@ -179,7 +239,16 @@ function update($pdo, $table, $values, $whereColumn, $whereValue)
     $query->execute();
 }
 
-function delete($pdo, $table,  $whereColumn, $whereValue)
+/**
+ * Supprime une valeur dans la table d'une base de donnée.
+ * 
+ * @param PDO $pdo
+ * @param string $table
+ * @param string $whereColumn
+ * @param string $whereValue
+ * @return void
+ */
+function delete($pdo, $table, $whereColumn, $whereValue)
 {
     $sql = 'DELETE FROM ' . $table . ' WHERE ' . $whereColumn . ' = ' . ':whereValue';
     $query = $pdo->prepare($sql);
