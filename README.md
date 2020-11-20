@@ -37,6 +37,8 @@ Notes:
 - vendor
 ```
 
+* Faites vos tests dans un dossier ``tests``.
+
 ### Base de données
 
 **Utilisateurs**
@@ -85,6 +87,14 @@ Notes:
 | subject    	| varchar(255) 	|
 | message    	| text         	|
 | created_at 	| datetime     	|
+
+## Credits
+Ce projet contient les éléments open source suivants:
+* [unDraw](https://undraw.co)
+* [Remix Icon](https://remixicon.com)
+* [Font Awesome](https://fontawesome.com)
+* [Flat Icon](https://www.flaticon.com)
+* [AdminLTE](https://adminlte.io)
 
 ## Links
 * [NFactory](https://nfactory.io)
