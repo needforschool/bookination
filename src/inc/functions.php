@@ -111,7 +111,6 @@ function calculateAge($birthDate)
  */
 function isLogged()
 {
-    session_start();
     if (!empty($_SESSION['user'])) return true;
     return false;
 }
@@ -123,7 +122,6 @@ function isLogged()
  */
 function isAdmin()
 {
-    session_start();
     if (!empty($_SESSION['user']) && $_SESSION['user']['role'] == 'admin') return true;
     return false;
 }
