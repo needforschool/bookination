@@ -7,8 +7,7 @@ session_start();
 if (isLogged()) {
     $user = select($pdo, 'bn_users', '*', 'id', $_SESSION['user']['id']);
 } else {
-    // TODO: Redirect to error.php
-    header('Location: ./error.php');
+    header('Location: ./error.php?e=403');
     die();
 }
 
