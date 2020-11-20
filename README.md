@@ -90,11 +90,13 @@ Notes:
 
 ## Credits
 Ce projet contient les éléments open source suivants:
-* [unDraw](https://undraw.co)
-* [Remix Icon](https://remixicon.com)
-* [Font Awesome](https://fontawesome.com)
-* [Flat Icon](https://www.flaticon.com)
 * [AdminLTE](https://adminlte.io)
+* [dotenv](https://github.com/symfony/dotenv)
+* [Flat Icon](https://www.flaticon.com)
+* [Font Awesome](https://fontawesome.com)
+* [PHPMailer](https://github.com/PHPMailer/PHPMailer)
+* [Remix Icon](https://remixicon.com)
+* [unDraw](https://undraw.co)
 
 ## Links
 * [NFactory](https://nfactory.io)
