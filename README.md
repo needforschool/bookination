@@ -3,7 +3,7 @@
 	<a href="https://nfactory.school"><img src="assets/img/logo/logo-black-bg-none.png" height="160"></a>
   <br>
   <p>
-    <a href="/../../"><img src="https://img.shields.io/github/last-commit/AntoineKM/nfactory-bookination" alt="GitHub last-commit" /></a>
+    <a href="/../../"><img src="https://img.shields.io/github/last-commit/nfactoryschool-2020/nfactory-bookination" alt="GitHub last-commit" /></a>
   </p>
 </div>
 
